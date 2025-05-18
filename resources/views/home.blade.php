@@ -5,192 +5,451 @@
 <!-- ======= قسم الشرائح ======= -->
 <section id="slider" class="relative mt-0 pt-0 mb-0">
   <div class="relative h-[700px] overflow-hidden">
-    
-    <!-- الشريحة 1 -->
-    <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 bg-cover bg-center" style="background-image: url('{{ asset('images/slider1.jpg') }}');">
+    @for ($i = 1; $i <= 3; $i++)
+    <div class="absolute inset-0 transition-opacity duration-1000 {{ $i === 1 ? 'opacity-100' : 'opacity-0' }} bg-cover bg-center" style="background-image: url('{{ asset('images/slider' . $i . '.jpg') }}');">
       <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end pr-8 md:pr-20 pl-4 md:pl-16">
         <div class="text-right font-arabic w-full max-w-[700px]">
           <div class="relative h-20 w-full max-w-[620px] overflow-hidden flex items-center">
             <div class="bar absolute h-full bg-[#1782a4] right-0 w-0 z-10"></div>
             <h1 class="headline absolute right-0 z-20 text-white text-3xl md:text-5xl font-bold whitespace-nowrap opacity-0">
-              إدارة المشاريع التقنية
+              {{ ['إدارة المشاريع التقنية', 'حلول الشبكات المتقدمة', 'أنظمة الحماية والمراقبة'][$i - 1] }}
             </h1>
           </div>
-          <p class="subtext text-[#75CBEB] mt-4 text-lg md:text-2xl opacity-0">نقدم لك حلاً متكاملاً لإدارة مشاريعك التقنية</p>
+          <p class="subtext text-[#75CBEB] mt-4 text-lg md:text-2xl opacity-0">
+            {{ ['نقدم لك حلاً متكاملاً لإدارة مشاريعك التقنية', 'نصمم لك البنية التحتية لشبكتك بأعلى كفاءة', 'أمنك بين يديك بكاميرات وأنظمة متقدمة'][$i - 1] }}
+          </p>
         </div>
       </div>
     </div>
-
-    <!-- الشريحة 2 -->
-    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center" style="background-image: url('{{ asset('images/slider2.jpg') }}');">
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end pr-8 md:pr-20 pl-4 md:pl-16">
-        <div class="text-right font-arabic w-full max-w-[700px]">
-          <div class="relative h-20 w-full max-w-[620px] overflow-hidden flex items-center">
-            <div class="bar absolute h-full bg-[#1782a4] right-0 w-0 z-10"></div>
-            <h1 class="headline absolute right-0 z-20 text-white text-3xl md:text-5xl font-bold whitespace-nowrap opacity-0">
-              حلول الشبكات المتقدمة
-            </h1>
-          </div>
-          <p class="subtext text-[#75CBEB] mt-4 text-lg md:text-2xl opacity-0">نصمم لك البنية التحتية لشبكتك بأعلى كفاءة</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- الشريحة 3 -->
-    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-cover bg-center" style="background-image: url('{{ asset('images/slider3.jpg') }}');">
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end pr-8 md:pr-20 pl-4 md:pl-16">
-        <div class="text-right font-arabic w-full max-w-[700px]">
-          <div class="relative h-20 w-full max-w-[620px] overflow-hidden flex items-center">
-            <div class="bar absolute h-full bg-[#1782a4] right-0 w-0 z-10"></div>
-            <h1 class="headline absolute right-0 z-20 text-white text-3xl md:text-5xl font-bold whitespace-nowrap opacity-0">
-              أنظمة الحماية والمراقبة
-            </h1>
-          </div>
-          <p class="subtext text-[#75CBEB] mt-4 text-lg md:text-2xl opacity-0">أمنك بين يديك بكاميرات وأنظمة متقدمة</p>
-        </div>
-      </div>
-    </div>
-
+    @endfor
   </div>
 </section>
 
-
-
-<!-- ======= قسم خدماتنا - تصميم إبداعي ======= -->
-<section class="py-12 md:py-16 bg-white text-center relative z-10">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-[#0077aa] mb-10 md:mb-12 relative inline-block">
-      خدماتنا
-      <span class="absolute bottom-0 left-0 w-full h-1 bg-[#0077aa] transform scale-x-75"></span>
-    </h2>
-
-    <div class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-      <!-- البطاقة 1 - كاميرات المراقبة -->
-      <div class="w-full sm:w-80 transform transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-96 bg-gradient-to-br from-[#0077aa] to-[#005577] rounded-2xl overflow-hidden shadow-xl group">
-          <div class="absolute inset-0 bg-[url('{{ asset('images/widget.png') }}')] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-          
-          <div class="relative h-full flex flex-col items-center p-6">
-            <div class="w-full h-48 mt-6 overflow-hidden rounded-xl shadow-lg border-4 border-white/20 transform group-hover:scale-95 transition-transform duration-500">
-              <img src="{{ asset('images/camera.jpg') }}" alt="أنظمة كاميرات المراقبة" class="w-full h-full object-cover">
-            </div>
-            
-            <div class="mt-6 text-center">
-              <h3 class="text-white text-2xl font-bold mb-3 relative inline-block">
-                أنظمة كاميرات المراقبة
-                <span class="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </h3>
-              <p class="text-white/80 text-sm hidden group-hover:block animate-fadeIn">
-                حلول متكاملة لأنظمة المراقبة الأمنية بتقنيات عالية الجودة
-              </p>
-            </div>
-            
-            <div class="mt-auto w-full">
-              <a href="/خدمات/كاميرات-المراقبة" class="inline-block px-6 py-2 bg-white text-[#0077aa] font-medium rounded-full transform group-hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
-                اكتشف المزيد
-              </a>
-            </div>
-          </div>
-          
-          <div class="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-medium">
-            أمن
-          </div>
+<!-- Services Section -->
+<section class="py-16 bg-gray-50 dark:bg-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-[#1a5a72] mb-4">خدماتنا </h2>
+            <div class="w-24 h-1 bg-[#55aabb] mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                نقدم مجموعة متكاملة من الخدمات التقنية لتلبية جميع احتياجاتك الأمنية والإدارية
+            </p>
         </div>
-      </div>
 
-      <!-- البطاقة 2 - خدمات الشبكات -->
-      <div class="w-full sm:w-80 transform transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-96 bg-gradient-to-br from-[#0077aa] to-[#005577] rounded-2xl overflow-hidden shadow-xl group">
-          <div class="absolute inset-0 bg-[url('{{ asset('images/widget.png') }}')] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-          
-          <div class="relative h-full flex flex-col items-center p-6">
-            <div class="w-full h-48 mt-6 overflow-hidden rounded-xl shadow-lg border-4 border-white/20 transform group-hover:scale-95 transition-transform duration-500">
-              <img src="{{ asset('images/network.jpg') }}" alt="خدمات الشبكات" class="w-full h-full object-cover">
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- أنظمة الاتصالات -->
+            <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72] transform hover:-translate-y-2">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-phone-alt text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الاتصالات</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>تأسيس السنترالات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة السنترالات الهاتفية (IP PBX)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة مؤتمرات الفيديو</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة الاتصال الداخلي</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>تأسيس خدمة الكول سنتر</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>مقويات الإرسال والاستقبال</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="mt-6 text-center">
-              <h3 class="text-white text-2xl font-bold mb-3 relative inline-block">
-                خدمات الشبكات
-                <span class="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </h3>
-              <p class="text-white/80 text-sm hidden group-hover:block animate-fadeIn">
-                تصميم وتنفيذ حلول شبكات متكاملة بأعلى معايير الكفاءة
-              </p>
+            <!-- أنظمة الحضور والانصراف -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-fingerprint text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الحضور والانصراف</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة بصمة الوجه</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة بصمة الأصبع</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة الحضور عبر بطاقة RFID</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة التقارير والإحصائيات</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="mt-auto w-full">
-              <a href="/خدمات/شبكات" class="inline-block px-6 py-2 bg-white text-[#0077aa] font-medium rounded-full transform group-hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
-                اكتشف المزيد
-              </a>
-            </div>
-          </div>
-          
-          <div class="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-medium">
-            اتصالات
-          </div>
-        </div>
-      </div>
 
-      <!-- البطاقة 3 - الأمن السيبراني -->
-      <div class="w-full sm:w-80 transform transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-96 bg-gradient-to-br from-[#0077aa] to-[#005577] rounded-2xl overflow-hidden shadow-xl group">
-          <div class="absolute inset-0 bg-[url('{{ asset('images/widget.png') }}')] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-          
-          <div class="relative h-full flex flex-col items-center p-6">
-            <div class="w-full h-48 mt-6 overflow-hidden rounded-xl shadow-lg border-4 border-white/20 transform group-hover:scale-95 transition-transform duration-500">
-              <img src="{{ asset('images/cyber.jpg') }}" alt="حلول الأمن السيبراني" class="w-full h-full object-cover">
+            <!-- أنظمة الكاشير -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-cash-register text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الكاشير</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة كاشير للمطاعم</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة كاشير للتجزئة</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة كاشير للمبيعات عبر الإنترنت</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة كاشير محمولة</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="mt-6 text-center">
-              <h3 class="text-white text-2xl font-bold mb-3 relative inline-block">
-                حلول الأمن السيبراني
-                <span class="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </h3>
-              <p class="text-white/80 text-sm hidden group-hover:block animate-fadeIn">
-                حماية شاملة لأنظمتك الرقمية من التهديدات الإلكترونية
-              </p>
+
+            <!-- أنظمة الإنذار والسلامة -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-fire-extinguisher text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الإنذار والسلامة</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة إنذار الحريق</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>مستشعرات الدخان والحرارة</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة إنذار الغاز</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="mt-auto w-full">
-              <a href="/خدمات/الأمن-السيبراني" class="inline-block px-6 py-2 bg-white text-[#0077aa] font-medium rounded-full transform group-hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
-                اكتشف المزيد
-              </a>
+
+            <!-- أنظمة المنازل الذكية -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-home text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة المنازل الذكية</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة الإضاءة الذكية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>التحكم في درجات الحرارة</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة الصوت الذكية</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          
-          <div class="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-medium">
-            حماية
-          </div>
+
+            <!-- الأنظمة الصوتية والبصرية -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-volume-up text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">الأنظمة الصوتية والبصرية</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>مكبرات الصوت</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة مكبرات الصوت المتكاملة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- أجهزة التتبع والمراقبة -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أجهزة التتبع والمراقبة</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة تتبع المركبات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة التتبع الشخصية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة مراقبة الأصول</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أنظمة إدارة أسطول المركبات</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- عقود الصيانة السنوية والدورية -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-tools text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">عقود الصيانة السنوية</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>صيانة الشاشات والأجهزة الإلكترونية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>صيانة الأنظمة التقنية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>صيانة أنظمة الطاقة الشمسية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>صيانة البرمجيات والتحديثات</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- أنظمة التحكم في الدخول -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-door-open text-[#1a5a72] text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة التحكم في الدخول</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة التحكم في الأبواب المنزلية والفيلات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>بوابات دخول الأفراد</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>بوابات تفتيش الحقائب والمعادن</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>أجهزة الأقفال الذكية</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>حواجز مواقف السيارات</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
+                            <span>بوابات أمنية بكاميرات ذكاء اصطناعي</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
 </section>
-
-<style>
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fadeIn {
-    animation: fadeIn 0.5s ease-out forwards;
-  }
-</style>
 
 
 <!-- ======= قسم نبذة تعريفية صغيرة ======= -->
-<section class="text-center pt-0 pb-8 px-4 bg-white">
+<section class="text-center pt-0 pb-8 px-4 bg-white dark:bg-gray-800">
   <div class="inline-block bg-[#1782a4] text-white text-sm sm:text-base font-bold rounded-full px-6 py-2 shadow-md">
     كل الخدمات والمنتجات التقنية في مكان واحد
   </div>
-  <p class="mt-4 text-sm sm:text-base text-[#0e5f75] font-medium">
+  <p class="mt-4 text-sm sm:text-base text-[#0e5f75] dark:text-[#9ddff2] font-medium">
     تقدم الشركة حلولًا شاملة تواكب تطلعات الأعمال وتسهم في تحقيق أهداف الأعمال
   </p>
 </section>
+<!-- قسم منتجاتنا التقنية -->
+<section class="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-[#55aabb] font-semibold">منتجاتنا التقنية</span>
+            <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-white mt-2">أحدث منتجاتنا</h2>
+            <div class="w-20 h-1 bg-[#55aabb] mx-auto mt-4"></div>
+        </div>
 
-<section class="py-16 bg-gradient-to-b from-[#f0f9ff] to-[#e0f2fe] text-center">
+        <!-- سلايدر المنتجات -->
+        <div class="relative overflow-hidden py-8">
+            <div class="swiper-container perfect-loop-slider">
+                <div class="swiper-wrapper">
+                    @php
+                    $products = [
+                        ['image' => '1.png', 'name' => 'سويتش PoE بـ 4 منافذ + منفذ Uplink', 'category' => 'شبكات'],
+                        ['image' => '6.png', 'name' => 'جهاز DVR من هيكفيجن – 8 قنوات', 'category' => 'انظمة مراقبة'],
+                        ['image' => '2.png', 'name' => 'مسجل فيديو رقمي AcuSense 8 قنوات', 'category' => 'كاميرات'],
+                        ['image' => '3.png', 'name' => ' هارد ديسك للمراقبة – ويسترن ديجيتال 10 تيرابايت', 'category' => 'انظمة مراقبة'],
+                        ['image' => '7.png', 'name' => 'كاميرا مراقبة صغيرة بدقة 4K ', 'category' => 'كاميرات'],
+                        ['image' => '8.png', 'name' => 'كاميرا شبكية ذات قبة ثابتة وميكروفون مدمج', 'category' => 'كاميرات'],
+                    ];
+                    @endphp
+
+                    <!-- تكرار العناصر لضمان عدم ظهور فراغات -->
+                    @foreach (array_merge($products, $products, $products) as $product)
+                    <div class="swiper-slide">
+                        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden mx-2 border border-gray-200 dark:border-slate-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                            <div class="relative h-56 flex items-center justify-center p-4 bg-gray-100 dark:bg-slate-700">
+                                <img src="{{ asset('images/products/' . $product['image']) }}" 
+                                     alt="{{ $product['name'] }}"
+                                     class="h-full object-contain transition duration-300 hover:scale-105">
+                                <span class="absolute top-3 right-3 bg-[#1a5a72] text-white text-xs font-bold px-2 py-1 rounded">
+                                    {{ $product['category'] }}
+                                </span>
+                            </div>
+                            <div class="p-4 text-center">
+                                <h3 class="text-lg font-bold text-[#1a5a72] dark:text-gray-300">{{ $product['name'] }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- أضف هذه الأكواد في head -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<!-- أضف هذا الكود قبل إغلاق body -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.perfect-loop-slider', {
+            loop: true,
+            loopAdditionalSlides: 10, // زيادة عدد الشرائح المكررة
+            loopPreventsSliding: false, // السماح بالحركة المستمرة
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+                waitForTransition: false // عدم الانتظار لانتهاء الانتقال
+            },
+            speed: 800, // سرعة أقل لسلاسة الحركة
+            grabCursor: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            freeMode: {
+                enabled: true,
+                momentum: false
+            },
+            breakpoints: {
+                480: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+                1280: { slidesPerView: 5 }
+            },
+            on: {
+                init: function() {
+                    // إصلاح بداية السلايدر
+                    setTimeout(() => {
+                        this.slideTo(0, 0);
+                    }, 100);
+                },
+                transitionEnd: function() {
+                    // إصلاح التوقف التلقائي
+                    if (!this.autoplay.running) {
+                        this.autoplay.start();
+                    }
+                }
+            }
+        });
+
+        // إعادة تشغيل السلايدر عند العودة للنافذة
+        window.addEventListener('focus', function() {
+            swiper.autoplay.start();
+        });
+    });
+</script>
+
+<style>
+    /* تخصيص السلايدر للحلقة المثالية */
+    .perfect-loop-slider .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+    
+    .perfect-loop-slider .swiper-slide {
+        width: 280px !important; /* عرض ثابت للشرائح */
+        opacity: 1 !important;
+        flex-shrink: 0;
+    }
+    
+    /* إصلاح مشكلة الفراغات */
+    .swiper-slide-duplicate {
+        display: block !important;
+    }
+    
+    /* تحسين مظهر البطاقات */
+    .swiper-slide {
+        height: auto;
+    }
+</style>
+<!-- ======= قسم الحلول التقنية ======= -->
+<section class="py-16 bg-gradient-to-b from-[#f0f9ff] to-[#e0f2fe] dark:from-gray-800 dark:to-gray-900 text-center text-black dark:text-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-[#0369a1] mb-12">حلولنا التقنية المتكاملة</h2>
+    <h2 class="text-4xl font-bold text-[#0369a1] dark:text-[#60cdf2] mb-12">حلولنا التقنية المتكاملة</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- بطاقة 1 -->
@@ -341,7 +600,198 @@
     </div>
   </div>
 </section>
+<!-- قسم الشركاء المساهمين -->
+<section class="py-16 bg-gray-50 dark:bg-slate-800">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-[#55aabb] font-semibold">شركاؤنا</span>
+            <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-white mt-2">شركاء النجاح</h2>
+            <div class="w-20 h-1 bg-[#55aabb] mx-auto mt-4"></div>
+            <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                نفتخر بشراكاتنا الاستراتيجية مع أبرز العلامات التجارية الرائدة في العالم
+            </p>
+        </div>
 
+        <!-- شبكة شعارات الشركاء -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 px-4">
+            <!-- شعار Hikvision -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/hikvision.png') }}" alt="Hikvision" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Dahua -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/dahua.png') }}" alt="Dahua" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار TP-Link -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner12.png') }}" alt="TP-Link" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Huawei -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner11.png') }}" alt="Huawei" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Cisco -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/cisco.png') }}" alt="Cisco" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Axis -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/azure.png') }}" alt="Axis" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Bosch -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner3.png') }}" alt="Bosch" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Sony -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner2.png') }}" alt="Sony" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Samsung -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner4.png') }}" alt="Samsung" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- شعار Dell -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner9.png') }}" alt="Dell" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+
+            <!-- شعار Dell -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/fortinet.png') }}" alt="Dell" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+
+            <!-- شعار Dell -->
+            <div class="partner-logo">
+                <img src="{{ asset('images/partners/partner7.png') }}" alt="Dell" 
+                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* تنسيق شبكة الشعارات */
+    .partner-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .partner-logo:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+    
+    .dark .partner-logo {
+        background: #1e293b;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* تكيف الشعارات مع أحجام الشاشات */
+    @media (max-width: 639px) {
+        .partner-logo {
+            height: 80px;
+            padding: 1rem;
+        }
+    }
+</style>
+
+<!-- قسم آراء العملاء -->
+<section class="py-16 bg-white dark:bg-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-[#55aabb] font-semibold">آراء العملاء</span>
+            <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-white mt-2">ما يقولونه عنا</h2>
+            <div class="w-20 h-1 bg-[#55aabb] mx-auto mt-4"></div>
+            <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                آراء عملائنا الأعزاء هي شهادتنا الحقيقية على جودة خدماتنا
+            </p>
+        </div>
+
+        <!-- شبكة آراء العملاء -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- رأي العميل 1 -->
+            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <img src="{{ asset('images/testimonials/client1.png') }}" alt="محمد أحمد" class="w-12 h-12 rounded-full object-cover">
+                    <div class="mr-3">
+                        <h4 class="font-bold text-[#1a5a72] dark:text-white">محمد أحمد</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">مدير شركة التقنية المتميزة</p>
+                    </div>
+                </div>
+                <div class="flex mb-2">
+                    <span class="text-yellow-400">★★★★★</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300">
+                    "لقد تفاجأت بجودة الخدمة وسرعة الاستجابة، فريق محترف يعرف ما يفعله تماماً. أنصح الجميع بالتعامل معهم."
+                </p>
+            </div>
+
+            <!-- رأي العميل 2 -->
+            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <img src="{{ asset('images/testimonials/client2.png') }}" alt="نورا السعدي" class="w-12 h-12 rounded-full object-cover">
+                    <div class="mr-3">
+                        <h4 class="font-bold text-[#1a5a72] dark:text-white">نورا السعدي</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">مديرة أنظمة الأمن</p>
+                    </div>
+                </div>
+                <div class="flex mb-2">
+                    <span class="text-yellow-400">★★★★★</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300">
+                    "المتابعة بعد البيع ممتازة، لم أتوقع هذا المستوى من الاهتمام. نظام المراقبة الذي زودونا به يعمل بكفاءة عالية."
+                </p>
+            </div>
+
+            <!-- رأي العميل 3 -->
+            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <img src="{{ asset('images/testimonials/client3.png') }}" alt="خالد الفهد" class="w-12 h-12 rounded-full object-cover">
+                    <div class="mr-3">
+                        <h4 class="font-bold text-[#1a5a72] dark:text-white">خالد الفهد</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">رئيس قسم IT</p>
+                    </div>
+                </div>
+                <div class="flex mb-2">
+                    <span class="text-yellow-400">★★★★☆</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300">
+                    "حلول الشبكات التي قدمتموها لنا ساهمت في زيادة كفاءة العمل بنسبة 40%. نتمنى لكم مزيداً من التقدم."
+                </p>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
 
 <!-- ======= الأنيميشن والسكريبت ======= -->
 <style>

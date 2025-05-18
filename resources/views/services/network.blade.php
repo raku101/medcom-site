@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- قسم الهيرو -->
-<section class="relative py-20 text-white overflow-hidden -mt-[50px] z-0">
+<section class="relative py-20 text-white overflow-hidden -mt-[50px] z-0 dark:bg-[#0f172a]">
     <!-- صورة الخلفية -->
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('images/network-bg.jpg') }}" alt="خلفية خدمات الشبكات" class="w-full h-full object-cover object-center">
@@ -24,18 +24,18 @@
 </section>
 
 <!-- قسم التفاصيل -->
-<section class="py-16 bg-white">
+<section class="py-16 bg-white dark:bg-slate-800 text-right">
     <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-right">
+        <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">حلول شبكات متكاملة</h2>
-            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 نقدم خدمات استشارية في تصميم وتنفيذ الشبكات الحاسب الآلي بأنواعها المختلفة (VPN-WIFI-WAN-LAN) لإنشاء شبكة ذكية ومتكاملة تواكب احتياجات العمل الحالية والمستقبلية.
             </p>
 
             <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <div class="bg-[#f8fafc] p-6 rounded-lg border-r-4 border-[#1a9ba4]">
+                <div class="bg-[#f8fafc] dark:bg-slate-700 p-6 rounded-lg border-r-4 border-[#1a9ba4]">
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-3">مميزات حلولنا</h3>
-                    <ul class="list-disc pr-5 space-y-2 text-gray-700">
+                    <ul class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300">
                         <li>توفير اتصال آمن وغير مقيد بين الموظفين والعملاء</li>
                         <li>ضمان إمكانية الوصول إلى المعلومات من أي مكان</li>
                         <li>أتمتة شبكات سهلة الإدارة والحماية</li>
@@ -43,9 +43,9 @@
                         <li>حماية مركزية ضد الفيروسات وبرامج التجسس</li>
                     </ul>
                 </div>
-                <div class="bg-[#f1f5f9] p-6 rounded-lg border-r-4 border-[#1a9ba4]">
+                <div class="bg-[#f1f5f9] dark:bg-slate-700 p-6 rounded-lg border-r-4 border-[#1a9ba4]">
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-3">خدمات نقدمها</h3>
-                    <ul class="list-disc pr-5 space-y-2 text-gray-700">
+                    <ul class="list-disc pr-5 space-y-2 text-gray-700 dark:text-gray-300">
                         <li>تصميم وتخطيط الشبكات من الصفر</li>
                         <li>تركيب وصيانة أجهزة الشبكة (Switches, Routers, Access Points)</li>
                         <li>تهيئة VPN آمن للموظفين عن بعد</li>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="text-center">
-                <a href="{{ url('/تواصل-معنا') }}" class="inline-block bg-[#1782a4] text-white px-8 py-3 rounded-full hover:bg-[#0e5f75] transition font-semibold text-lg">
+                <a href="{{ url('/تواصل-معنا') }}" class="inline-block bg-[#1782a4] text-white px-8 py-3 rounded-full hover:bg-[#0e5f75] transition font-semibold text-lg dark:bg-[#1792b4] dark:hover:bg-[#0e6a87]">
                     تواصل معنا الآن
                 </a>
             </div>

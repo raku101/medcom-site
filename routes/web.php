@@ -53,10 +53,26 @@ Route::get('/إدارة-المشروعات-التقنية', function () {
 Route::get('/أعمال-الكهرباء', function () {
     return view('electrical-works');
 });
+Route::get('/الخدمات', function () {
+    return view('services');
+});
+Route::get('/المنتجات', function () {
+    return view('products');
+});
+
+
+
 use App\Models\Page;
+Route::view('/الأسئلة-الشائعة', 'faq')->name('faq');
+Route::view('/الأخبار-والمقالات', 'news')->name('news');
 
 
 Route::get('{slug}', function ($slug) {
     $page = Page::where('slug', $slug)->firstOrFail();
     return view('pages.dynamic', compact('page'));
 });
+Route::get('/articles/{slug}', function ($slug) {
+    return view('articles.' . $slug);
+})->name('article.show');
+
+
