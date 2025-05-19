@@ -114,5 +114,12 @@
 
 
  @yield('scripts')
+ <!-- أيقونة واتساب عائمة باستخدام صورة -->
+<a href="https://wa.me/966558008895?text=مرحباً، أريد الاستفسار عن خدماتكم"
+   target="_blank"
+   class="fixed bottom-4 left-4 z-50 w-16 h-16">
+   <img src="{{ asset('images/whatsapp-icon.png') }}" alt="تواصل عبر واتساب" class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
+</a>
+
 </body>
 </html>

@@ -3,19 +3,20 @@
 @section('content')
 
 <!-- ======= قسم الشرائح ======= -->
+
 <section id="slider" class="relative mt-0 pt-0 mb-0">
-  <div class="relative h-[700px] overflow-hidden">
+  <div class="relative h-[500px] md:h-[700px] overflow-hidden">
     @for ($i = 1; $i <= 3; $i++)
     <div class="absolute inset-0 transition-opacity duration-1000 {{ $i === 1 ? 'opacity-100' : 'opacity-0' }} bg-cover bg-center" style="background-image: url('{{ asset('images/slider' . $i . '.jpg') }}');">
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end pr-8 md:pr-20 pl-4 md:pl-16">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end pr-4 md:pr-20 pl-4 md:pl-16">
         <div class="text-right font-arabic w-full max-w-[700px]">
-          <div class="relative h-20 w-full max-w-[620px] overflow-hidden flex items-center">
+          <div class="relative h-16 md:h-20 w-full max-w-[620px] overflow-hidden flex items-center">
             <div class="bar absolute h-full bg-[#1782a4] right-0 w-0 z-10"></div>
-            <h1 class="headline absolute right-0 z-20 text-white text-3xl md:text-5xl font-bold whitespace-nowrap opacity-0">
+            <h1 class="headline absolute right-0 z-20 text-white text-xl md:text-5xl font-bold md:whitespace-nowrap opacity-0">
               {{ ['إدارة المشاريع التقنية', 'حلول الشبكات المتقدمة', 'أنظمة الحماية والمراقبة'][$i - 1] }}
             </h1>
           </div>
-          <p class="subtext text-[#75CBEB] mt-4 text-lg md:text-2xl opacity-0">
+          <p class="subtext text-[#75CBEB] mt-2 md:mt-4 text-base md:text-2xl opacity-0">
             {{ ['نقدم لك حلاً متكاملاً لإدارة مشاريعك التقنية', 'نصمم لك البنية التحتية لشبكتك بأعلى كفاءة', 'أمنك بين يديك بكاميرات وأنظمة متقدمة'][$i - 1] }}
           </p>
         </div>
@@ -24,6 +25,9 @@
     @endfor
   </div>
 </section>
+
+
+
 
 <!-- Services Section -->
 <section class="py-16 bg-gray-50 dark:bg-slate-900">
