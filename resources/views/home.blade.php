@@ -3,315 +3,109 @@
 @section('content')
 
 <!-- ======= قسم الشرائح ======= -->
-
 <section id="slider" class="relative mt-0 pt-0 mb-0">
-  <div class="relative h-[400px] sm:h-[500px] md:h-[700px] overflow-hidden">
-    @for ($i = 1; $i <= 3; $i++)
-    <div class="absolute inset-0 transition-opacity duration-1000 {{ $i === 1 ? 'opacity-100' : 'opacity-0' }} bg-cover bg-center" style="background-image: url('{{ asset('images/slider' . $i . '.jpg') }}');">
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end px-6 md:px-20">
-        <div class="text-right font-arabic w-full max-w-full md:max-w-[700px] mr-2 sm:mr-0">
-          <div class="relative h-auto min-h-[60px] md:h-20 md:min-h-0 w-full max-w-full md:max-w-[620px] flex items-center">
+  <div class="relative h-[500px] md:h-[700px] lg:h-[850px] xl:h-[950px] overflow-hidden">
+
+    @php
+      $slides = [
+        ['title' => 'إدارة المشاريع التقنية', 'subtitle' => 'حلول متكاملة لإدارة مشاريعك', 'image' => 'slider1.jpg'],
+        ['title' => 'حلول الشبكات المتقدمة', 'subtitle' => 'تصميم البنية التحتية للشبكات', 'image' => 'slider2.jpg'],
+        ['title' => 'أنظمة الحماية والمراقبة', 'subtitle' => 'أنظمة حماية ومراقبة متكاملة', 'image' => 'slider3.jpg'],
+
+        ['title' => 'أنظمة الاتصالات', 'subtitle' => 'حلول متكاملة لربط مؤسستك داخليًا وخارجيًا', 'image' => 'service1.jpg'],
+        ['title' => 'أنظمة الإنذار والسلامة', 'subtitle' => 'تقنيات متقدمة لحماية الأرواح والممتلكات', 'image' => 'service2.jpg'],
+        ['title' => 'أنظمة المنازل الذكية', 'subtitle' => 'تحكم كامل في بيتك من أي مكان', 'image' => 'service3.jpg'],
+        ['title' => 'الأنظمة الصوتية والبصرية', 'subtitle' => 'جودة صوت وصورة تناسب جميع الاحتياجات', 'image' => 'service4.jpg'],
+        ['title' => 'أجهزة التتبع والمراقبة', 'subtitle' => 'تتبع ذكي للمركبات والأصول والمواقع', 'image' => 'service5.jpg'],
+        ['title' => 'عقود الصيانة السنوية', 'subtitle' => 'صيانة وقائية دورية تضمن استمرارية العمل', 'image' => 'service6.jpg'],
+        ['title' => 'أنظمة التحكم في الدخول', 'subtitle' => 'أمان مخصص لأبواب ومرافق المنشآت', 'image' => 'service7.jpg'],
+        ['title' => 'حلول الذكاء الاصطناعي والتحليلات', 'subtitle' => 'تقنيات تحليل البيانات والتنبؤ الذكي', 'image' => 'service8.jpg'],
+        ['title' => 'حلول البرمجيات والتطبيقات', 'subtitle' => 'تطوير أنظمة مرنة تناسب احتياجاتك', 'image' => 'service9.jpg'],
+        ['title' => 'أنظمة الطاقة البديلة', 'subtitle' => 'حلول طاقة نظيفة ومستدامة للمستقبل', 'image' => 'service10.jpg'],
+        ['title' => 'أنظمة الأمن والسلامة المهنية', 'subtitle' => 'أنظمة لحماية العاملين وفق أعلى المعايير', 'image' => 'service11.jpg'],
+      ];
+    @endphp
+
+    @foreach ($slides as $index => $slide)
+    <div class="absolute inset-0 transition-opacity duration-1000 {{ $index === 0 ? 'opacity-100' : 'opacity-0' }} bg-cover bg-center" style="background-image: url('{{ asset('images/' . $slide['image']) }}');">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center px-4 md:px-16">
+        <div class="text-right font-arabic w-full max-w-[95%] md:max-w-[600px] lg:max-w-[750px] xl:max-w-[900px] mx-auto">
+          <div class="relative min-h-[5rem] md:min-h-[7rem] lg:min-h-[9rem] xl:min-h-[10rem] w-full flex items-center justify-end overflow-visible">
+            <!-- الشريط الأزرق المتحرك -->
             <div class="bar absolute h-full bg-[#1782a4] right-0 w-0 z-10"></div>
-            <h1 class="headline relative md:absolute right-0 z-20 text-white text-2xl sm:text-3xl md:text-5xl font-bold opacity-0 px-3 md:px-0 py-2 md:py-0 text-wrap">
-              {{ ['إدارة المشاريع التقنية', 'حلول الشبكات المتقدمة', 'أنظمة الحماية والمراقبة'][$i - 1] }}
+
+            <!-- العنوان الرئيسي -->
+            <h1 class="headline text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold opacity-0 whitespace-normal break-words px-2 text-right w-full" style="word-wrap: break-word;">
+              {{ $slide['title'] }}
             </h1>
           </div>
-          <p class="subtext text-[#75CBEB] mt-3 md:mt-4 text-lg sm:text-xl md:text-2xl opacity-0 px-3 md:px-0 text-wrap">
-            {{ ['نقدم لك حلاً متكاملاً لإدارة مشاريعك التقنية', 'نصمم لك البنية التحتية لشبكتك بأعلى كفاءة', 'أمنك بين يديك بكاميرات وأنظمة متقدمة'][$i - 1] }}
-            </p>
+
+          <!-- النص الثانوي -->
+          <p class="subtext text-[#75CBEB] mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl opacity-0 px-2">
+            {{ $slide['subtitle'] }}
+          </p>
         </div>
       </div>
     </div>
-    @endfor
+    @endforeach
+
   </div>
 </section>
 
+<!-- ======= تحسين line-height لمنع القطع في الكمبيوتر ======= -->
+<style>
+  @media (min-width: 768px) {
+    .headline {
+      line-height: 1.4 !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .headline {
+      line-height: 1.6 !important;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .headline {
+      line-height: 1.75 !important;
+    }
+  }
+</style>
 
 
 
 <!-- Services Section -->
-<section class="py-16 bg-gray-50 dark:bg-slate-900">
+<!-- خدماتنا في الرئيسية -->
+<section class="py-16 bg-gray-100 dark:bg-slate-900">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-[#1a5a72] mb-4">خدماتنا </h2>
-            <div class="w-24 h-1 bg-[#55aabb] mx-auto mb-6"></div>
-            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                نقدم مجموعة متكاملة من الخدمات التقنية لتلبية جميع احتياجاتك الأمنية والإدارية
-            </p>
+            <h2 class="text-3xl font-bold text-[#1a5a72] mb-4">خدمات مختارة</h2>
+            <div class="w-24 h-1 bg-[#55aabb] mx-auto mb-4"></div>
+            <p class="text-lg text-gray-600 dark:text-gray-300">تعرف على أبرز خدماتنا التقنية</p>
         </div>
 
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- أنظمة الاتصالات -->
-            <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72] transform hover:-translate-y-2">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-phone-alt text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الاتصالات</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach($services->take(6) as $service)
+                <a href="{{ url('/الخدمات/' . $service->slug) }}"
+                   class="block bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]"
+                   data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                    <img src="{{ asset('images/services/' . $service->slug . '.jpg') }}"
+                         onerror="this.src='{{ asset('images/services/default.jpg') }}'"
+                         alt="{{ $service->title }}"
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-[#1a5a72] text-center">{{ $service->title }}</h3>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>تأسيس السنترالات</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة السنترالات الهاتفية (IP PBX)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة مؤتمرات الفيديو</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة الاتصال الداخلي</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>تأسيس خدمة الكول سنتر</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>مقويات الإرسال والاستقبال</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- أنظمة الحضور والانصراف -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-fingerprint text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الحضور والانصراف</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة بصمة الوجه</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة بصمة الأصبع</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة الحضور عبر بطاقة RFID</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة التقارير والإحصائيات</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                </a>
+            @endforeach
+        </div>
 
-            <!-- أنظمة الكاشير -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-cash-register text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الكاشير</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة كاشير للمطاعم</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة كاشير للتجزئة</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة كاشير للمبيعات عبر الإنترنت</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة كاشير محمولة</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- أنظمة الإنذار والسلامة -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-fire-extinguisher text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة الإنذار والسلامة</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة إنذار الحريق</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>مستشعرات الدخان والحرارة</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة إنذار الغاز</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- أنظمة المنازل الذكية -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-home text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة المنازل الذكية</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة الإضاءة الذكية</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>التحكم في درجات الحرارة</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة الصوت الذكية</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- الأنظمة الصوتية والبصرية -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-volume-up text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">الأنظمة الصوتية والبصرية</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>مكبرات الصوت</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة مكبرات الصوت المتكاملة</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- أجهزة التتبع والمراقبة -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-map-marker-alt text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أجهزة التتبع والمراقبة</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة تتبع المركبات</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة التتبع الشخصية</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة مراقبة الأصول</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أنظمة إدارة أسطول المركبات</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- عقود الصيانة السنوية والدورية -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-tools text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">عقود الصيانة السنوية</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>صيانة الشاشات والأجهزة الإلكترونية</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>صيانة الأنظمة التقنية</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>صيانة أنظمة الطاقة الشمسية</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>صيانة البرمجيات والتحديثات</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- أنظمة التحكم في الدخول -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-[#1a5a72]/10 p-3 rounded-full mr-4">
-                            <i class="fas fa-door-open text-[#1a5a72] text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a5a72]">أنظمة التحكم في الدخول</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة التحكم في الأبواب المنزلية والفيلات</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>بوابات دخول الأفراد</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>بوابات تفتيش الحقائب والمعادن</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>أجهزة الأقفال الذكية</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>حواجز مواقف السيارات</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-[#55aabb] mt-1 mr-2"></i>
-                            <span>بوابات أمنية بكاميرات ذكاء اصطناعي</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="text-center mt-10">
+            <a href="{{ route('services.index') }}"
+               class="inline-block bg-[#1a5a72] text-white font-bold py-3 px-8 rounded-full hover:bg-[#155768] transition-all shadow-lg">
+                عرض المزيد من الخدمات
+            </a>
         </div>
     </div>
 </section>
@@ -604,130 +398,106 @@
     </div>
   </div>
 </section>
-<!-- قسم الشركاء المساهمين -->
-<section class="py-16 bg-gray-50 dark:bg-slate-800">
+<!--شركاؤنا-->
+<!-- قسم الشركاء بسلايدر متحرك -->
+<section class="py-12 bg-gray-50 dark:bg-slate-800">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <span class="text-[#55aabb] font-semibold">شركاؤنا</span>
-            <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-white mt-2">شركاء النجاح</h2>
-            <div class="w-20 h-1 bg-[#55aabb] mx-auto mt-4"></div>
-            <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                نفتخر بشراكاتنا الاستراتيجية مع أبرز العلامات التجارية الرائدة في العالم
-            </p>
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-[#1a5a72] dark:text-white">شركاؤنا الاستراتيجيون</h2>
+            <div class="w-16 h-1 bg-[#55aabb] mx-auto mt-3"></div>
         </div>
 
-        <!-- شبكة شعارات الشركاء -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 px-4">
-            <!-- شعار Hikvision -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/hikvision.png') }}" alt="Hikvision" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Dahua -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/dahua.png') }}" alt="Dahua" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار TP-Link -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner12.png') }}" alt="TP-Link" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Huawei -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner11.png') }}" alt="Huawei" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Cisco -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/cisco.png') }}" alt="Cisco" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Axis -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/azure.png') }}" alt="Axis" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Bosch -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner3.png') }}" alt="Bosch" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Sony -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner2.png') }}" alt="Sony" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Samsung -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner4.png') }}" alt="Samsung" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-            
-            <!-- شعار Dell -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner9.png') }}" alt="Dell" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
+        <div class="relative">
+            <!-- سلايدر الشركاء -->
+            <div class="swiper partner-swiper">
+                <div class="swiper-wrapper py-4">
+                    @php
+                    $logos = [
+                        'hikvision', 'dahua', 'partner12', 'partner11', 'cisco', 'azure',
+                        'partner3', 'partner2', 'partner4', 'partner9', 'fortinet',
+                        'partner7', '1', '2', '3', '4', '5', '6', '7', '8',
+                        '9', '11', '12', '13', '14', '15', '16', '17', '18', '19',
+                        '20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
+                        '30', '31'
+                    ];
+                    @endphp
 
-            <!-- شعار Dell -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/fortinet.png') }}" alt="Dell" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
-            </div>
-
-            <!-- شعار Dell -->
-            <div class="partner-logo">
-                <img src="{{ asset('images/partners/partner7.png') }}" alt="Dell" 
-                     class="w-full h-auto max-h-20 object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110">
+                    @foreach (array_merge($logos, $logos, $logos) as $logo)
+                    <div class="swiper-slide">
+                        <div class="partner-logo h-24 flex items-center justify-center px-4">
+                            <img src="{{ asset('images/partners/' . $logo . '.png') }}" alt="{{ $logo }}"
+                                 class="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110">
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- أضف هذه الأكواد في head -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<!-- أضف هذا الكود قبل إغلاق body -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.partner-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 4000,
+            grabCursor: false,
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            freeMode: {
+                enabled: true,
+                momentum: false
+            },
+            breakpoints: {
+                640: { spaceBetween: 40 },
+                1024: { spaceBetween: 50 }
+            },
+            on: {
+                init: function() {
+                    // إصلاح بداية السلايدر
+                    this.slideTo(0, 0);
+                }
+            }
+        });
+    });
+</script>
+
 <style>
-    /* تنسيق شبكة الشعارات */
+    /* تخصيص سلايدر الشركاء */
+    .partner-swiper {
+        overflow: hidden;
+    }
+    
+    .partner-swiper .swiper-slide {
+        width: auto !important;
+    }
+    
     .partner-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        padding: 1.5rem;
-        background: white;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         transition: all 0.3s ease;
     }
     
     .partner-logo:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        z-index: 10;
     }
     
-    .dark .partner-logo {
-        background: #1e293b;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* تكيف الشعارات مع أحجام الشاشات */
-    @media (max-width: 639px) {
-        .partner-logo {
-            height: 80px;
-            padding: 1rem;
-        }
+    /* إخفاء أشرطة التمرير */
+    .partner-swiper::-webkit-scrollbar {
+        display: none;
     }
 </style>
 
-<!-- قسم آراء العملاء -->
+
+<!-- قسم آراء العملاء بسلايدر متحرك -->
 <section class="py-16 bg-white dark:bg-slate-900">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
@@ -739,138 +509,595 @@
             </p>
         </div>
 
-        <!-- شبكة آراء العملاء -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- رأي العميل 1 -->
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <img src="{{ asset('images/testimonials/client1.png') }}" alt="محمد أحمد" class="w-12 h-12 rounded-full object-cover">
-                    <div class="mr-3">
-                        <h4 class="font-bold text-[#1a5a72] dark:text-white">محمد أحمد</h4>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">مدير شركة التقنية المتميزة</p>
+        <!-- سلايدر آراء العملاء -->
+        <div class="relative px-8">
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper py-6">
+                    <!-- العميل 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    ف
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">فهد الرشيد</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "الخدمة ممتازة والفريق محترف جداً، أنصح الجميع بالتعامل معهم."
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex mb-2">
-                    <span class="text-yellow-400">★★★★★</span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300">
-                    "لقد تفاجأت بجودة الخدمة وسرعة الاستجابة، فريق محترف يعرف ما يفعله تماماً. أنصح الجميع بالتعامل معهم."
-                </p>
-            </div>
 
-            <!-- رأي العميل 2 -->
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <img src="{{ asset('images/testimonials/client2.png') }}" alt="نورا السعدي" class="w-12 h-12 rounded-full object-cover">
-                    <div class="mr-3">
-                        <h4 class="font-bold text-[#1a5a72] dark:text-white">نورا السعدي</h4>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">مديرة أنظمة الأمن</p>
+                    <!-- العميل 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ن
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">نورة القحطاني</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "سرعتهم في التنفيذ ودقتهم في العمل تستحق الإشادة."
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex mb-2">
-                    <span class="text-yellow-400">★★★★★</span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300">
-                    "المتابعة بعد البيع ممتازة، لم أتوقع هذا المستوى من الاهتمام. نظام المراقبة الذي زودونا به يعمل بكفاءة عالية."
-                </p>
-            </div>
 
-            <!-- رأي العميل 3 -->
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <img src="{{ asset('images/testimonials/client3.png') }}" alt="خالد الفهد" class="w-12 h-12 rounded-full object-cover">
-                    <div class="mr-3">
-                        <h4 class="font-bold text-[#1a5a72] dark:text-white">خالد الفهد</h4>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">رئيس قسم IT</p>
+                    <!-- العميل 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    ت
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">تركي العتيبي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "حلولهم التقنية ساعدت في تطوير عملي بشكل ملحوظ."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 4 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ل
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">لولوة السليم</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "تجربة ممتازة مع الفريق، دعم فني مميز وسريع."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 5 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    ب
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">بدر الشهري</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "أنظمة الحماية التي زودونا بها على أعلى مستوى."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 6 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    أ
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">أمل الجبرين</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "الدقة في المواعيد والالتزام بالجودة من أهم ما يميزهم."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 7 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    س
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">علي الغامدي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "حلول متكاملة تغطي جميع احتياجاتنا التقنية."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 8 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ه
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">هناء العتيبي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "فريق دعم فني متاح على مدار الساعة."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 9 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    خ
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">خالد الحربي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "أسعار تنافسية مع جودة عالية في الخدمة."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 10 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ر
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">ريم السويد</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "توصيل المعدات في الوقت المحدد دون أي تأخير."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 11 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    ع
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">عبدالله الزهراني</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "حلول أمن المعلومات التي قدموها كانت ممتازة."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 12 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    م
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">محمد السعد</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "التكلفة مقابل الجودة كانت معقولة جداً."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 13 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    ح
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">حسن النجدي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "التدريب الذي حصل عليه موظفينا كان شاملاً ومفيداً."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 14 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ض
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">ضياء القحطاني</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "التحديثات الدورية لأنظمتنا تتم في الوقت المحدد."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 15 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    و
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">وليد الفهد</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "سرعة استجابة الفريق الفني في حالات الطوارئ ممتازة."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 16 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ي
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">يوسف المطيري</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "التصميم الاحترافي لأنظمة المراقبة كان مميزاً."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 17 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    ص
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">صالح العلي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★☆</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "حلول الشبكات التي قدموها ساهمت في رفع كفاءة العمل."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 18 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ع
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">علي الشمراني</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "التعامل معهم كان احترافياً من البداية للنهاية."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 19 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                                    م
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">منى الحارثي</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "التقارير الشهرية التي يقدمونها مفيدة جداً للإدارة."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- العميل 20 -->
+                    <div class="swiper-slide">
+                        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#55aabb] flex items-center justify-center text-white text-xl font-bold">
+                                    ج
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="font-bold text-[#1a5a72] dark:text-white">جواهر السديري</h4>
+                                </div>
+                            </div>
+                            <div class="flex mb-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                "أنظمة المراقبة تعمل بكفاءة عالية منذ التركيب."
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex mb-2">
-                    <span class="text-yellow-400">★★★★☆</span>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300">
-                    "حلول الشبكات التي قدمتموها لنا ساهمت في زيادة كفاءة العمل بنسبة 40%. نتمنى لكم مزيداً من التقدم."
-                </p>
             </div>
+            
+            <!-- أزرار التنقل -->
+            <div class="swiper-button-next !text-[#1a5a72] dark:!text-white"></div>
+            <div class="swiper-button-prev !text-[#1a5a72] dark:!text-white"></div>
         </div>
-
-        
     </div>
 </section>
 
-<!-- ======= الأنيميشن والسكريبت ======= -->
-<style>
-  @keyframes expand-bar {
-    0% { width: 0; }
-    100% { width: 100%; }
-  }
+<!-- أضف هذه الأكواد في head -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-  @keyframes contract-bar {
-    0% { right: 0; width: 100%; }
-    100% { right: 100%; width: 0; }
-  }
-
-  @keyframes reveal-text {
-    0% { clip-path: inset(0 100% 0 0); opacity: 1; }
-    100% { clip-path: inset(0 0% 0 0); opacity: 1; }
-  }
-
-  .animate-expand { animation: expand-bar 1s ease-out forwards; }
-  .animate-contract { animation: contract-bar 1s ease-in forwards; }
-  .animate-reveal { animation: reveal-text 1s ease-in forwards; }
-  .animate-fade-in { animation: fadeIn 1s ease-in forwards; }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-</style>
-
+<!-- أضف هذا الكود قبل إغلاق body -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll("#slider > div > div");
-    let current = 0;
-
-    function resetAnimations(slide) {
-      slide.querySelector('.bar').className = "bar absolute h-full bg-[#1782a4] right-0 w-0 z-10";
-      slide.querySelector('.headline').className = "headline absolute right-0 z-20 text-white text-3xl md:text-5xl font-bold whitespace-nowrap opacity-0";
-      slide.querySelector('.subtext').className = "subtext text-[#75CBEB] mt-4 text-lg md:text-2xl opacity-0";
-    }
-
-    function playAnimation(slide) {
-      const bar = slide.querySelector('.bar');
-      const text = slide.querySelector('.headline');
-      const subtext = slide.querySelector('.subtext');
-
-      bar.classList.add("animate-expand");
-
-      setTimeout(() => {
-        bar.classList.remove("animate-expand");
-        bar.classList.add("animate-contract");
-        text.classList.remove("opacity-0");
-        text.classList.add("animate-reveal");
-      }, 1000);
-
-      setTimeout(() => {
-        subtext.classList.add("animate-fade-in");
-      }, 2500);
-    }
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? "1" : "0";
-        resetAnimations(slide);
-      });
-      playAnimation(slides[index]);
-    }
-
-    showSlide(current);
-
-    setInterval(() => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }, 7000);
-  });
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.testimonials-slider', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 800,
+            grabCursor: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    });
 </script>
 
+<style>
+    /* تخصيص سلايدر آراء العملاء */
+    .testimonials-slider .swiper-slide {
+        height: auto;
+    }
+    
+    /* تخصيص أزرار التنقل */
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .swiper-button-next, .swiper-button-prev {
+        background-color: rgba(255,255,255,0.7);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        backdrop-filter: blur(4px);
+    }
+    
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+        background-color: rgba(255,255,255,0.9);
+    }
+    
+    .dark .swiper-button-next, 
+    .dark .swiper-button-prev {
+        background-color: rgba(30,41,59,0.7);
+    }
+    
+    .dark .swiper-button-next:hover, 
+    .dark .swiper-button-prev:hover {
+        background-color: rgba(30,41,59,0.9);
+    }
+</style>
+<!-- ======= تأثيرات الشرائح (CSS) ======= -->
+<style>
+@keyframes expand-bar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes contract-bar {
+  0% { right: 0; width: 100%; }
+  100% { right: 100%; width: 0; }
+}
+
+@keyframes reveal-text {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-expand {
+  animation: expand-bar 0.7s ease-out forwards;
+}
+
+.animate-contract {
+  animation: contract-bar 0.7s ease-in forwards;
+}
+
+.animate-reveal {
+  animation: reveal-text 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    min-width: 4px;
+  }
+}
+</style>
+
+<!-- ======= سكريبت الشرائح (JavaScript) ======= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll("#slider > div > div");
+  let current = 0;
+
+  function resetAnimations(slide) {
+    const bar = slide.querySelector('.bar');
+    const headline = slide.querySelector('.headline');
+    const subtext = slide.querySelector('.subtext');
+
+    bar.classList.remove('animate-expand', 'animate-contract');
+    bar.style.width = '0';
+    bar.style.right = '0';
+    bar.style.display = 'block'; // إعادة إظهار الشريط في كل شريحة
+
+    headline.classList.remove('animate-reveal');
+    subtext.classList.remove('animate-fade-in');
+
+    headline.style.opacity = '0';
+    subtext.style.opacity = '0';
+  }
+
+  function playAnimation(slide) {
+    const bar = slide.querySelector('.bar');
+    const headline = slide.querySelector('.headline');
+    const subtext = slide.querySelector('.subtext');
+
+    bar.classList.add('animate-expand');
+
+    setTimeout(() => {
+      bar.classList.remove('animate-expand');
+      bar.classList.add('animate-contract');
+      headline.classList.add('animate-reveal');
+    }, 700);
+
+    setTimeout(() => {
+      subtext.classList.add('animate-fade-in');
+    }, 1500);
+
+    // 🧼 إخفاء الشريط بعد انتهاء الانكماش (للجوال والكمبيوتر)
+    setTimeout(() => {
+      bar.style.display = 'none';
+    }, 2200);
+  }
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? "1" : "0";
+      resetAnimations(slide);
+    });
+    playAnimation(slides[index]);
+  }
+
+  showSlide(current);
+
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 7000);
+});
+</script>
 
 @endsection

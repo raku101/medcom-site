@@ -41,6 +41,7 @@
                                 <select id="subject" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#1a9ba4] focus:border-transparent bg-white dark:bg-slate-800 text-black dark:text-white">
                                     <option value="">اختر الموضوع</option>
                                     <option value="support">الدعم الفني</option>
+                                    <option value="other">طلب عرض سعر</option>
                                     <option value="sales">الاستفسارات التجارية</option>
                                     <option value="partnership">الشراكات</option>
                                     <option value="other">موضوع آخر</option>
@@ -55,52 +56,82 @@
                     </form>
                 </div>
                 <!-- Contact Info -->
-                <div class="text-right">
-                    <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">معلومات التواصل</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-[#1a5a72]/10 p-3 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#1a5a72]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-[#1a5a72]">الهاتف</h3>
-                                <p class="text-gray-700 dark:text-gray-300">+966 55 800 8895</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-[#1a5a72]/10 p-3 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#1a5a72]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-[#1a5a72]">البريد الإلكتروني</h3>
-                                <p class="text-gray-700 dark:text-gray-300">info@medcom.it.com</p>
-                                <p class="text-gray-700 dark:text-gray-300">support@medcom.it.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-[#1a5a72]/10 p-3 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#1a5a72]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-[#1a5a72]">العنوان</h3>
-                                <p class="text-gray-700 dark:text-gray-300">المدينة المنورة، المملكة العربية السعودية</p>
-                                <p class="text-gray-700 dark:text-gray-300">شارع الملك عبدالله</p>
-                            </div>
-                        </div>
-                        <div class="pt-4">
-                            <h3 class="font-bold text-[#1a5a72] mb-3">ساعات العمل</h3>
-                            <p class="text-gray-700 dark:text-gray-300">الأحد - الخميس: 8 صباحاً - 5 مساءً</p>
-                            <p class="text-gray-700 dark:text-gray-300">الجمعة - السبت: إجازة</p>
-                        </div>
-                    </div>
-                </div>
+<div class="text-right">
+    <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">معلومات التواصل</h2>
+    <div class="space-y-6">
+        <!-- الهاتف -->
+<div class="flex items-start gap-4">
+  <div class="bg-[#1a5a72]/10 p-3 rounded-full">
+    <i class="fas fa-phone text-[#1a5a72] text-lg"></i>
+  </div>
+  <div>
+    <h3 class="font-bold text-[#1a5a72] mb-2">الهاتف</h3>
+
+    <!-- رقم 1 -->
+    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300 mb-1">
+      <span>+966558008895</span>
+      <a href="tel:+966558008895" class="text-[#1a5a72] hover:text-green-600" title="اتصال">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a href="https://wa.me/966558008895" target="_blank" class="text-[#1a5a72] hover:text-green-600" title="واتساب">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- رقم 2 -->
+    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+      <span>+966595932021</span>
+      <a href="tel:+966595932021" class="text-[#1a5a72] hover:text-green-600" title="اتصال">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a href="https://wa.me/966595932021" target="_blank" class="text-[#1a5a72] hover:text-green-600" title="واتساب">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+        <!-- البريد -->
+        <div class="flex items-start gap-4">
+            <div class="bg-[#1a5a72]/10 p-3 rounded-full">
+                <i class="fas fa-envelope text-[#1a5a72] text-lg"></i>
+            </div>
+            <div>
+                <h3 class="font-bold text-[#1a5a72]">البريد الإلكتروني</h3>
+                <p>
+                    <a href="mailto:info@medcom.it.com" class="text-gray-700 dark:text-gray-300 hover:underline">info@medcom.it.com</a>
+                </p>
+                <p>
+                    <a href="mailto:support@medcom.it.com" class="text-gray-700 dark:text-gray-300 hover:underline">support@medcom.it.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- العنوان -->
+        <div class="flex items-start gap-4">
+            <div class="bg-[#1a5a72]/10 p-3 rounded-full">
+                <i class="fas fa-map-marker-alt text-[#1a5a72] text-lg"></i>
+            </div>
+            <div>
+                <h3 class="font-bold text-[#1a5a72]">العنوان</h3>
+                <a href="https://maps.app.goo.gl/1s6BCRDDtAN6Tkqa8?g_st=iw" target="_blank" class="text-gray-700 dark:text-gray-300 hover:underline block">
+                    المدينة المنورة، المملكة العربية السعودية ، شارع الملك عبدالله
+                </a>
+                
+            </div>
+        </div>
+
+        <!-- ساعات العمل -->
+        <div class="pt-4">
+            <h3 class="font-bold text-[#1a5a72] mb-3">ساعات العمل</h3>
+            <p class="text-gray-700 dark:text-gray-300">السبت - الخميس: 8 صباحاً - 8 مساءً</p>
+            <p class="text-gray-700 dark:text-gray-300">الجمعة: 4 - 10 مساءً</p>
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
     </div>
@@ -110,10 +141,20 @@
 <section class="bg-gray-100 dark:bg-slate-900">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.689314857498!2d46.67541531500078!3d24.8138375840715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3b9b8a640a1%3A0x96d6c6f5b1a1a0a0!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg shadow-md"></iframe>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.7081245093816!2d39.580958!3d24.4775324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbfd5f8e51f27%3A0x85d3124a55f17736!2z2KfZhNiq2YTZitmE2YjYqSDYp9mE2YXYs9mE2Kkg2KfZhNmF2KzYp9mG2YrYqSDYp9mE2KfZhNmF2K3ZitmK2Kkg2KfZhNi12YTZhNmK2Kkg2KfZhNir2KfYqtiMINmI2YjZitix2KfZhNmK2YUgLSDYp9mE2YXYsdmK2YUg2KfZhNi52KfYsdmK2KfZhiAtINin2YTYp9mE2YXZitmI2YTYpw!5e0!3m2!1sar!2ssa!4v1716370000000!5m2!1sar!2ssa" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg shadow-md">
+            </iframe>
         </div>
     </div>
 </section>
+
 
 <!-- CTA Section -->
 <section class="py-12 bg-[#1a5a72] text-white dark:bg-slate-700">

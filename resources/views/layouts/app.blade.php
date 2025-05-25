@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="transition-colors duration-300">
 <head>
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <meta charset="UTF-8">
   <title>@yield('title', 'مدكوم')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,6 +123,14 @@
    class="fixed bottom-4 left-4 z-50 w-16 h-16">
    <img src="{{ asset('images/whatsapp-icon.png') }}" alt="تواصل عبر واتساب" class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
 </a>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+</script>
 
 </body>
 </html>
