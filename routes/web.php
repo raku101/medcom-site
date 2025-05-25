@@ -7,13 +7,10 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Models\Service;
 use App\Models\Page;
 
-// ✅ صفحة الخدمات العامة (البطاقات)
+// ✅ صفحة الخدمات العامة
 Route::get('/الخدمات', [ServiceController::class, 'publicIndex'])->name('services.index');
 
-
-// ✅ صفحات الموقع الأخرى
-
-
+// ✅ صفحات ثابتة ومحتوى الموقع
 Route::get('/', function () {
     $services = Service::latest()->take(6)->get();
     return view('home', compact('services'));
@@ -37,18 +34,18 @@ Route::get('/إدارة-المشروعات-التقنية', fn () => view('proje
 Route::get('/أعمال-الكهرباء', fn () => view('electrical-works'));
 Route::get('/المنتجات', fn () => view('products'));
 
-// ✅ صفحات ثابتة
 Route::view('/الأسئلة-الشائعة', 'faq')->name('faq');
 Route::view('/الأخبار-والمقالات', 'news')->name('news');
 
-// ✅ صفحات المحتوى الديناميكي
-Route::get('/{slug}', function ($slug) {
-    $page = Page::where('slug', $slug)->firstOrFail();
-    return view('pages.dynamic', compact('page'));
-});
-
-// ✅ عرض مقالات
 Route::get('/articles/{slug}', fn ($slug) => view('articles.' . $slug))->name('article.show');
+
+// ✅ صفحة تفاصيل الخدمة
+Route::get('/الخدمات/{slug}', function ($slug) {
+    if (View::exists("services.$slug")) {
+        return view("services.$slug");
+    }
+    abort(404);
+});
 
 // ✅ البحث
 Route::get('/search', function (Request $request) {
@@ -60,14 +57,6 @@ Route::get('/search', function (Request $request) {
 Route::get('/api/search', function () {
     $q = request('q');
     return Service::where('title', 'like', '%' . $q . '%')->select('title', 'slug')->get();
-});
-
-// ✅ صفحة تفاصيل الخدمة
-Route::get('/الخدمات/{slug}', function ($slug) {
-    if (View::exists("services.$slug")) {
-        return view("services.$slug");
-    }
-    abort(404);
 });
 
 // ✅ لوحة التحكم
@@ -82,3 +71,9 @@ Route::post('/logout', function (Request $request) {
     $request->session()->regenerateToken();
     return redirect('/login');
 })->name('logout');
+
+// ✅ صفحة ديناميكية حسب الـ slug (ضعها في النهاية دائمًا)
+Route::get('/{slug}', function ($slug) {
+    $page = Page::where('slug', $slug)->firstOrFail();
+    return view('pages.dynamic', compact('page'));
+});
