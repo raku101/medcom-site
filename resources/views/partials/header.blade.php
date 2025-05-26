@@ -53,7 +53,7 @@
     <!-- روابط الكمبيوتر -->
     <nav class="hidden md:flex gap-10 font-bold text-[#333] dark:text-white text-[15px] pr-[250px] whitespace-nowrap items-center">
       <a href="/" class="hover:text-[#1782a4]">الرئيسية</a>
-      <a href="/المنتجات" class="hover:text-[#1782a4]">المنتجات</a>
+      <a href="{{ route('products.index') }}" class="hover:text-[#1782a4]">المنتجات</a>
       <a href="/الخدمات" class="hover:text-[#1782a4]">الخدمات</a>
       <a href="partners" class="hover:text-[#1782a4]">شركاؤنا</a>
       <a href="سابقة-الاعمال" class="hover:text-[#1782a4]">سابقة الأعمال</a>
@@ -82,7 +82,7 @@
   <!-- قائمة الهاتف -->
   <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 bg-white dark:bg-slate-800 px-6 py-4 font-bold text-[#333] dark:text-white text-sm text-center">
     <a href="/" class="hover:text-[#1782a4]">الرئيسية</a>
-    <a href="/المنتجات" class="hover:text-[#1782a4]">المنتجات</a>
+    <a href="{{ route('products.index') }}" class="hover:text-[#1782a4]">المنتجات</a>
     <a href="/الخدمات" class="hover:text-[#1782a4]">الخدمات</a>
     <a href="partners" class="hover:text-[#1782a4]">شركاؤنا</a>
     <a href="سابقة-الاعمال" class="hover:text-[#1782a4]">سابقة الأعمال</a>
@@ -103,10 +103,9 @@
 
   <!-- مربع البحث -->
   <div id="search-box" class="hidden absolute left-4 top-full mt-2 w-[300px] md:w-[400px] bg-white dark:bg-slate-800 shadow-lg rounded-lg z-50 p-4">
-  <input id="search-input" type="text" placeholder="ابحث عن خدمة..." class="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1782a4]">
-  <div id="search-suggestions" class="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1 hidden rounded-md overflow-hidden border border-gray-200 dark:border-slate-600"></div>
-</div>
-
+    <input id="search-input" type="text" placeholder="ابحث عن خدمة..." class="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1782a4]">
+    <div id="search-suggestions" class="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1 hidden rounded-md overflow-hidden border border-gray-200 dark:border-slate-600"></div>
+  </div>
 </header>
 
 <!-- سكريبت التحكم في ظهور مربع البحث -->
@@ -160,7 +159,6 @@
         });
     });
 
-    // إخفاء القائمة عند الضغط خارجها
     document.addEventListener('click', function (e) {
       if (!input.contains(e.target) && !suggestions.contains(e.target)) {
         suggestions.classList.add('hidden');
@@ -168,4 +166,3 @@
     });
   });
 </script>
-
