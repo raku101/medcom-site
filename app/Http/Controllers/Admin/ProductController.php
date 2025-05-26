@@ -22,33 +22,32 @@ class ProductController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'nullable|string',
-        'price' => 'required|numeric',
-        'image' => 'nullable|image|max:2048',
-    ]);
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric',
+            'image' => 'nullable|image|max:2048',
+        ]);
 
-    $product = new Product();
-    $product->title = $request->title;
-    $product->slug = \Str::slug($request->title);
-    $product->description = $request->description;
-    $product->price = $request->price;
-    $product->is_active = $request->has('is_active');
-    $product->is_featured = $request->has('is_featured');
+        $product = new Product();
+        $product->title = $request->title;
+        $product->slug = Str::slug($request->title);
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->is_active = $request->has('is_active');
+        $product->is_featured = $request->has('is_featured');
 
-    // حفظ الصورة
-    if ($request->hasFile('image')) {
-        $path = $request->file('image')->store('uploads/products', 'public');
-        $product->image = 'storage/' . $path;
+        // حفظ الصورة
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('uploads/products', 'public');
+            $product->image = 'storage/' . $path;
+        }
+
+        $product->save();
+
+        return redirect()->route('admin.products.index')->with('success', 'تمت إضافة المنتج بنجاح');
     }
-
-    $product->save();
-
-    return redirect()->route('admin.products.index')->with('success', 'تمت إضافة المنتج بنجاح');
-}
-
 
     public function edit(Product $product)
     {
@@ -74,11 +73,12 @@ class ProductController extends Controller
         ];
 
         if ($request->hasFile('image')) {
-            if ($product->image && Storage::disk('public')->exists($product->image)) {
-                Storage::disk('public')->delete($product->image);
+            if ($product->image && Storage::disk('public')->exists(str_replace('storage/', '', $product->image))) {
+                Storage::disk('public')->delete(str_replace('storage/', '', $product->image));
             }
 
-            $data['image'] = $request->file('image')->store('products', 'public');
+            $path = $request->file('image')->store('uploads/products', 'public');
+            $data['image'] = 'storage/' . $path;
         }
 
         $product->update($data);
@@ -88,12 +88,26 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-        if ($product->image && Storage::disk('public')->exists($product->image)) {
-            Storage::disk('public')->delete($product->image);
+        if ($product->image && Storage::disk('public')->exists(str_replace('storage/', '', $product->image))) {
+            Storage::disk('public')->delete(str_replace('storage/', '', $product->image));
         }
 
         $product->delete();
 
         return redirect()->route('admin.products.index')->with('success', 'تم حذف المنتج بنجاح');
+    }
+
+    /**
+     * حذف صورة المنتج فقط
+     */
+    public function deleteImage(Product $product)
+    {
+        if ($product->image && Storage::disk('public')->exists(str_replace('storage/', '', $product->image))) {
+            Storage::disk('public')->delete(str_replace('storage/', '', $product->image));
+            $product->image = null;
+            $product->save();
+        }
+
+        return redirect()->back()->with('success', 'تم حذف صورة المنتج بنجاح');
     }
 }

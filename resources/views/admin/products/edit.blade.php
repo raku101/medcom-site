@@ -13,6 +13,14 @@
 
     <div class="card">
         <div class="card-body">
+            {{-- عرض رسالة نجاح إن وجدت --}}
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            {{-- نموذج تعديل المنتج --}}
             <form action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
@@ -41,14 +49,26 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                
+
+                {{-- صورة المنتج --}}
                 <div class="mb-3">
                     <label for="image" class="form-label">صورة المنتج</label>
+
                     @if($product->image)
                         <div class="mb-2">
                             <img src="{{ asset($product->image) }}" alt="{{ $product->title }}" class="img-thumbnail" style="max-height: 200px;">
                         </div>
+
+                        {{-- نموذج مستقل لحذف الصورة --}}
+                        <form action="{{ route('admin.products.deleteImage', $product->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من حذف الصورة الحالية؟');" class="mb-3">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash me-1"></i> حذف الصورة الحالية
+                            </button>
+                        </form>
                     @endif
+
                     <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
                     <small class="form-text text-muted">اترك هذا الحقل فارغاً إذا كنت لا ترغب في تغيير الصورة</small>
                     @error('image')
@@ -95,7 +115,6 @@
         }
     });
 
-    // عند إرسال النموذج، انسخ محتوى المحرر إلى الحقل المخفي
     document.querySelector('form').onsubmit = function () {
         document.getElementById('description').value = quill.root.innerHTML;
     };

@@ -4,48 +4,52 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Models\Service;
 use App\Models\Page;
 
-// ✅ صفحة الخدمات العامة
-Route::get('/الخدمات', [ServiceController::class, 'publicIndex'])->name('services.index');
-
-// ✅ صفحات ثابتة ومحتوى الموقع
+// ✅ الصفحة الرئيسية
 Route::get('/', function () {
     $services = Service::latest()->take(6)->get();
     return view('home', compact('services'));
 });
 
+// ✅ الخدمات العامة
+Route::get('/الخدمات', [ServiceController::class, 'publicIndex'])->name('services.index');
+
+// ✅ صفحات ثابتة
 Route::get('/partners', fn () => view('partners'));
 Route::get('/سابقة-الاعمال', fn () => view('works'));
 Route::get('/من-نحن', fn () => view('about'));
 Route::get('/تواصل-معنا', fn () => view('contact'));
+Route::get('/وظائف', fn () => view('jobs'));
+Route::get('/الأسئلة-الشائعة', fn () => view('faq'))->name('faq');
+Route::get('/الأخبار-والمقالات', fn () => view('news'))->name('news');
+Route::get('/الخدمات-والمنتجات', fn () => view('services-products'));
+Route::get('/المنتجات', fn () => view('products'));
+
+// ✅ صفحات خدمات مخصصة
 Route::get('/خدمات/كاميرات-المراقبة', fn () => view('services.cameras'));
 Route::get('/خدمات/شبكات', fn () => view('services.network'));
-Route::get('خدمات/الأمن-السيبراني', fn () => view('services.cyber'));
+Route::get('/خدمات/الأمن-السيبراني', fn () => view('services.cyber'));
 Route::get('/الحلول-السحابية', fn () => view('cloud'));
 Route::get('/إدارة-عقود-الصيانة', fn () => view('maintenance'));
 Route::get('/حلول-الأنظمة-الصوتية', fn () => view('audio-solutions'));
 Route::get('/حلول-البيوت-الذكية', fn () => view('smart-homes'));
-Route::get('/وظائف', fn () => view('jobs'));
 Route::get('/حلول-الحوسبة-الافتراضية', fn () => view('virtualization'));
-Route::get('/الخدمات-والمنتجات', fn () => view('services-products'));
 Route::get('/إدارة-المشروعات-التقنية', fn () => view('project-management'));
 Route::get('/أعمال-الكهرباء', fn () => view('electrical-works'));
-Route::get('/المنتجات', fn () => view('products'));
 
-Route::view('/الأسئلة-الشائعة', 'faq')->name('faq');
-Route::view('/الأخبار-والمقالات', 'news')->name('news');
-
-Route::get('/articles/{slug}', fn ($slug) => view('articles.' . $slug))->name('article.show');
-
-// ✅ صفحة تفاصيل الخدمة
+// ✅ تفاصيل الخدمات الديناميكية من الملفات
 Route::get('/الخدمات/{slug}', function ($slug) {
     if (View::exists("services.$slug")) {
         return view("services.$slug");
     }
     abort(404);
 });
+
+// ✅ عرض المقالات
+Route::get('/articles/{slug}', fn ($slug) => view('articles.' . $slug))->name('article.show');
 
 // ✅ البحث
 Route::get('/search', function (Request $request) {
@@ -59,20 +63,33 @@ Route::get('/api/search', function () {
     return Service::where('title', 'like', '%' . $q . '%')->select('title', 'slug')->get();
 });
 
-// ✅ لوحة التحكم
-Route::prefix('admin')->middleware('web')->group(function () {
+// ✅ مسارات الدخول والخروج الخاصة بالإدارة فقط
+Route::get('/admin/login', [AuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/admin/login', [AuthController::class, 'login'])->name('admin.login.submit');
+Route::post('/admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
+
+// ✅ لوحة التحكم (محمية)
+Route::prefix('admin')->middleware('auth')->group(function () {
     require base_path('routes/admin.php');
 });
-
 // ✅ تسجيل الخروج
 Route::post('/logout', function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
     $request->session()->regenerateToken();
-    return redirect('/login');
+    return redirect('/admin/login');
 })->name('logout');
+Auth::routes();
+Route::get('/home', function () {
+    return view('admin.dashboard'); // أو أي صفحة تريدها بعد تسجيل الدخول
+})->name('home');
+use App\Http\Controllers\Site\ProductController;
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::delete('/admin/products/{product}/delete-image', [\App\Http\Controllers\Admin\ProductController::class, 'deleteImage'])->name('admin.products.deleteImage');
 
-// ✅ صفحة ديناميكية حسب الـ slug (ضعها في النهاية دائمًا)
+
+
+// ✅ صفحة ديناميكية حسب slug (توضع في النهاية دائمًا)
 Route::get('/{slug}', function ($slug) {
     $page = Page::where('slug', $slug)->firstOrFail();
     return view('pages.dynamic', compact('page'));
