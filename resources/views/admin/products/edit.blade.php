@@ -21,7 +21,7 @@
             @endif
 
             {{-- نموذج تعديل المنتج --}}
-            <form action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data">
+            <form id="main-form" action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 
@@ -35,7 +35,7 @@
                 
                 <div class="mb-3">
                     <label for="description" class="form-label">وصف المنتج</label>
-                    <div id="editor-container" style="height: 300px; direction: rtl; background-color: #fff;">{!! old('description', $product->description) !!}</div>
+                    <div id="editor-container" style="height: 300px; direction: rtl; background-color: #fff;"></div>
                     <input type="hidden" name="description" id="description">
                     @error('description')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -58,15 +58,6 @@
                         <div class="mb-2">
                             <img src="{{ asset($product->image) }}" alt="{{ $product->title }}" class="img-thumbnail" style="max-height: 200px;">
                         </div>
-
-                        {{-- نموذج مستقل لحذف الصورة --}}
-                        <form action="{{ route('admin.products.deleteImage', $product->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من حذف الصورة الحالية؟');" class="mb-3">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash me-1"></i> حذف الصورة الحالية
-                            </button>
-                        </form>
                     @endif
 
                     <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
@@ -92,6 +83,17 @@
                     </button>
                 </div>
             </form>
+
+            {{-- نموذج مستقل لحذف الصورة --}}
+            @if($product->image)
+            <form action="{{ route('admin.products.deleteImage', $product->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من حذف الصورة الحالية؟');" class="mt-3">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="bi bi-trash me-1"></i> حذف الصورة الحالية
+                </button>
+            </form>
+            @endif
         </div>
     </div>
 </div>
@@ -115,8 +117,13 @@
         }
     });
 
-    document.querySelector('form').onsubmit = function () {
+    // تعبئة المحرر بمحتوى الوصف عند التحميل
+    quill.root.innerHTML = `{!! old('description', $product->description) !!}`;
+
+    // نسخ المحتوى للحقل المخفي عند الإرسال
+    document.getElementById('main-form').onsubmit = function () {
         document.getElementById('description').value = quill.root.innerHTML;
+        return true; // هذا السطر يسمح للنموذج بالاستمرار في الإرسال
     };
 </script>
 @endpush

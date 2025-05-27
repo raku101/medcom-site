@@ -27,7 +27,7 @@
               </div>
               <div class="modal-body d-flex align-items-center gap-4">
                 <img src="{{ asset($product->image) }}" class="img-fluid w-50" alt="{{ $product->title }}">
-                <p class="w-50">{{ $product->description ?? 'لا يوجد وصف' }}</p>
+                <div class="w-50">{!! $product->description ?? 'لا يوجد وصف' !!}</div>
               </div>
             </div>
           </div>
