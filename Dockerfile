@@ -23,6 +23,7 @@ RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # فتح المنفذ 8000 لتشغيل التطبيق
 EXPOSE 8000
+RUN php artisan storage:link
 
 # تشغيل Laravel
 CMD php artisan serve --host=0.0.0.0 --port=8000
