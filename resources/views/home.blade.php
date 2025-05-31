@@ -11,7 +11,6 @@
         ['title' => 'إدارة المشاريع التقنية', 'subtitle' => 'حلول متكاملة لإدارة مشاريعك', 'image' => 'slider1.jpg'],
         ['title' => 'حلول الشبكات المتقدمة', 'subtitle' => 'تصميم البنية التحتية للشبكات', 'image' => 'slider2.jpg'],
         ['title' => 'أنظمة الحماية والمراقبة', 'subtitle' => 'أنظمة حماية ومراقبة متكاملة', 'image' => 'slider3.jpg'],
-
         ['title' => 'أنظمة الاتصالات', 'subtitle' => 'حلول متكاملة لربط مؤسستك داخليًا وخارجيًا', 'image' => 'service1.jpg'],
         ['title' => 'أنظمة الإنذار والسلامة', 'subtitle' => 'تقنيات متقدمة لحماية الأرواح والممتلكات', 'image' => 'service2.jpg'],
         ['title' => 'أنظمة المنازل الذكية', 'subtitle' => 'تحكم كامل في بيتك من أي مكان', 'image' => 'service3.jpg'],
@@ -27,21 +26,16 @@
     @endphp
 
     @foreach ($slides as $index => $slide)
-    <div class="absolute inset-0 transition-opacity duration-1000 {{ $index === 0 ? 'opacity-100' : 'opacity-0' }} bg-cover bg-center" style="background-image: url('{{ asset('images/' . $slide['image']) }}');">
+    <div class="absolute inset-0 transition-opacity duration-1000 {{ $index === 0 ? 'opacity-100' : 'opacity-0' }} bg-cover bg-center slide" style="background-image: url('{{ asset('images/' . $slide['image']) }}');">
       <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center px-4 md:px-16">
         <div class="text-right font-arabic w-full max-w-[95%] md:max-w-[600px] lg:max-w-[750px] xl:max-w-[900px] mx-auto">
-          <div class="relative min-h-[5rem] md:min-h-[7rem] lg:min-h-[9rem] xl:min-h-[10rem] w-full flex items-center justify-end overflow-visible">
-            <!-- الشريط الأزرق المتحرك -->
-            <div class="bar absolute h-full bg-[#1782a4] right-0 w-0 z-10"></div>
-
-            <!-- العنوان الرئيسي -->
-            <h1 class="headline text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold opacity-0 whitespace-normal break-words px-2 text-right w-full" style="word-wrap: break-word;">
+          <div class="relative min-h-[5rem] md:min-h-[7rem] lg:min-h-[9rem] xl:min-h-[10rem] w-full flex items-center justify-end overflow-hidden">
+            <h1 class="headline text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold whitespace-normal break-words px-2 text-right w-full absolute z-10 opacity-0 animate-none">
               {{ $slide['title'] }}
             </h1>
+            <div class="bar absolute h-full bg-[#1782a4] right-0 top-0 w-0 z-20 origin-right"></div>
           </div>
-
-          <!-- النص الثانوي -->
-          <p class="subtext text-[#75CBEB] mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl opacity-0 px-2">
+          <p class="subtext text-[#75CBEB] mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl opacity-0 px-2 relative z-20">
             {{ $slide['subtitle'] }}
           </p>
         </div>
@@ -52,26 +46,89 @@
   </div>
 </section>
 
-<!-- ======= تحسين line-height لمنع القطع في الكمبيوتر ======= -->
 <style>
   @media (min-width: 768px) {
     .headline {
       line-height: 1.4 !important;
     }
   }
-
   @media (min-width: 1024px) {
     .headline {
       line-height: 1.6 !important;
     }
   }
-
   @media (min-width: 1280px) {
     .headline {
       line-height: 1.75 !important;
     }
   }
+
+  @keyframes typing {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .animate-typing {
+    animation: typing 1.2s steps(40, end) forwards;
+    direction: rtl;
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('#slider .slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        const headline = slide.querySelector('.headline');
+        const subtext = slide.querySelector('.subtext');
+        const bar = slide.querySelector('.bar');
+
+        headline.classList.add('opacity-0');
+        subtext.classList.add('opacity-0');
+
+        if (i === index) {
+          slide.classList.add('opacity-100');
+          slide.classList.remove('opacity-0');
+
+          bar.style.transition = 'none';
+          bar.style.width = '100%';
+
+          setTimeout(() => {
+            bar.style.transition = 'width 1.2s ease-in-out';
+            bar.style.width = '0';
+            headline.style.zIndex = 10;
+            headline.classList.remove('opacity-0');
+            headline.classList.add('opacity-100', 'animate-typing');
+            subtext.classList.remove('opacity-0');
+            subtext.classList.add('opacity-100');
+          }, 50);
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0');
+          bar.style.width = '0';
+          headline.classList.remove('opacity-100', 'animate-typing');
+          subtext.classList.remove('opacity-100');
+        }
+      });
+    }
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 7000);
+
+    showSlide(currentSlide);
+  });
+</script>
+
+
+
 
 
 
@@ -120,6 +177,64 @@
     تقدم الشركة حلولًا شاملة تواكب تطلعات الأعمال وتسهم في تحقيق أهداف الأعمال
   </p>
 </section>
+<!-- ======= قسم إنجازاتنا بالأرقام ======= -->
+<section class="py-16 bg-gray-100 dark:bg-gray-900" id="stats">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-4">إنجازاتنا بالأرقام</h2>
+      <div class="w-24 h-1 bg-[#1ac8a4] mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      @foreach ([ 
+        ['count' => 300, 'label' => 'مشروع مكتمل'],
+        ['count' => 1000, 'label' => 'عميل راضٍ'],
+        ['count' => 50, 'label' => 'شريك استراتيجي'],
+        ['count' => 24, 'label' => 'ساعة دعم فني']
+      ] as $stat)
+      <div class="bg-white dark:bg-gray-700 p-5 rounded-xl shadow-md">
+        <div class="text-6xl font-extrabold text-[#1a5a72] dark:text-[#60cdf2] mb-2 counter" data-target="{{ $stat['count'] }}">0</div>
+        <div class="text-lg text-gray-600 dark:text-gray-300">{{ $stat['label'] }}</div>
+      </div>
+      @endforeach
+    </div>
+  </div>
+</section>
+
+<!-- ======= سكريبت تحريك الأرقام ======= -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+          const speed = 10;
+          const step = Math.ceil(target / 100);
+
+          const updateCounter = () => {
+            count += step;
+            if (count < target) {
+              counter.innerText = count;
+              setTimeout(updateCounter, speed);
+            } else {
+              counter.innerText = target + '+';
+            }
+          };
+
+          updateCounter();
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  });
+</script>
+
 <!-- قسم منتجاتنا التقنية -->
 <section class="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800">
     <div class="container mx-auto px-4">

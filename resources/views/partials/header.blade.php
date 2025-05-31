@@ -35,6 +35,12 @@
       <a href="https://www.pinterest.com/medcomitcom/" class="bg-white text-[#1782a4] p-2 w-8 h-8 flex items-center justify-center rounded-md hover:bg-[#0e5f75] hover:text-white transition">
         <i class="fab fa-pinterest"></i>
       </a>
+      <a href="https://www.tiktok.com/@medcom.it" class="bg-white text-[#1782a4] p-2 w-8 h-8 flex items-center justify-center rounded-md hover:bg-[#0e5f75] hover:text-white transition">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.snapchat.com/add/medcom.it" class="bg-white text-[#1782a4] p-2 w-8 h-8 flex items-center justify-center rounded-md hover:bg-[#0e5f75] hover:text-white transition">
+        <i class="fab fa-snapchat"></i>
+      </a>
     </div>
   </div>
 
@@ -42,7 +48,7 @@
   <div class="bg-white dark:bg-slate-900 h-14 flex items-center justify-between px-4 shadow-md relative z-40">
     <!-- شعار الجوال فقط -->
     <div class="md:hidden flex items-center">
-      <img src="{{ asset('images/medcom-1.png') }}" alt="Logo" class="h-10 object-contain animate-loop-fade">
+      <img src="{{ asset('images/medcom-1.png') }}" alt="Logo" class="h-16 object-contain animate-loop-fade">
     </div>
 
     <!-- زر القائمة في الجوال -->
@@ -51,39 +57,53 @@
     </button>
 
     <!-- روابط الكمبيوتر -->
-    <nav class="hidden md:flex gap-10 font-bold text-[#333] dark:text-white text-[15px] pr-[250px] whitespace-nowrap items-center">
-      <a href="/" class="hover:text-[#1782a4]">الرئيسية</a>
-      <a href="{{ route('products.index') }}" class="hover:text-[#1782a4]">المنتجات</a>
-      <a href="/الخدمات" class="hover:text-[#1782a4]">الخدمات</a>
-      <a href="partners" class="hover:text-[#1782a4]">شركاؤنا</a>
-      <a href="سابقة-الاعمال" class="hover:text-[#1782a4]">سابقة الأعمال</a>
-      <a href="من-نحن" class="hover:text-[#1782a4]">عن الشركة</a>
-      <a href="تواصل-معنا" class="hover:text-[#1782a4]">تواصل معنا</a>
-      <a href="/الأسئلة-الشائعة" class="hover:text-[#1782a4]">الأسئلة الشائعة</a>
-      <a href="{{ url('الأخبار-والمقالات') }}" class="hover:text-[#1782a4]">الأخبار والمقالات</a>
+    <nav class="hidden md:flex gap-6 font-bold text-[#333] dark:text-white text-[15px] items-center w-full justify-end pr-[250px]">
+      <a href="/" class="hover:text-[#1782a4] whitespace-nowrap">الرئيسية</a>
+      <a href="{{ route('products.index') }}" class="hover:text-[#1782a4] whitespace-nowrap">المنتجات</a>
+      <a href="/الخدمات" class="hover:text-[#1782a4] whitespace-nowrap">الخدمات</a>
+      <a href="{{ route('solutions.index') }}" class="hover:text-[#1782a4] whitespace-nowrap">الحلول</a>
+      <a href="partners" class="hover:text-[#1782a4] whitespace-nowrap">شركاؤنا</a>
+      <a href="سابقة-الاعمال" class="hover:text-[#1782a4] whitespace-nowrap">سابقة الأعمال</a>
+      <a href="من-نحن" class="hover:text-[#1782a4] whitespace-nowrap">عن الشركة</a>
+      <a href="تواصل-معنا" class="hover:text-[#1782a4] whitespace-nowrap">تواصل معنا</a>
+      <a href="/الأسئلة-الشائعة" class="hover:text-[#1782a4] whitespace-nowrap">الأسئلة الشائعة</a>
+      <a href="{{ url('الأخبار-والمقالات') }}" class="hover:text-[#1782a4] whitespace-nowrap">الأخبار والمقالات</a>
 
-      <!-- أيقونات الوضع المظلم والبحث -->
-      <div class="flex items-center gap-3 ml-4">
-        <button id="theme-toggle" class="text-xl hover:text-yellow-400">
-          <i id="theme-icon" class="fas fa-moon"></i>
-        </button>
-        <button id="search-toggle" class="text-xl hover:text-[#1782a4]">
-          <i class="fas fa-search"></i>
-        </button>
+      <!-- مربع البحث بجانب القائمة -->
+      <div class="relative w-[240px]">
+        <input id="search-input" type="text" placeholder="ابحث في الموقع..." class="w-full px-3 py-1.5 rounded-md border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1782a4]">
+        <div id="search-suggestions" class="absolute w-full mt-1 bg-white dark:bg-slate-800 rounded-md border border-gray-300 dark:border-slate-600 hidden z-50 text-sm text-gray-800 dark:text-gray-200"></div>
       </div>
+
+      <!-- أيقونات الوضع المظلم -->
+      <button id="theme-toggle" class="text-xl hover:text-yellow-400">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </button>
+      <!-- زر تغيير اللغة باستخدام أعلام -->
+<form action="{{ route('lang.switch', app()->getLocale() === 'ar' ? 'en' : 'ar') }}" method="GET" class="flex items-center">
+    <button type="submit" class="text-xl hover:opacity-80 transition" title="Change Language">
+        @if(app()->getLocale() === 'ar')
+            <img src="{{ asset('images/flags/us.png') }}" alt="English" class="w-11 h-6">
+        @else
+            <img src="{{ asset('images/flags/sa.png') }}" alt="Arabic" class="w-11 h-6">
+        @endif
+    </button>
+</form>
     </nav>
   </div>
 
   <!-- شعار الكمبيوتر فقط (ثابت أعلى الهيدر) -->
   <div class="absolute top-[0px] right-[46px] hidden md:block bg-white px-4 py-2 rounded-b-xl shadow-lg z-50">
-    <img src="{{ asset('images/medcom-1.png') }}" alt="Logo" class="h-[110px] object-contain animate-loop-fade">
+    <img src="{{ asset('images/medcom-1.png') }}" alt="Logo" class="h-[120px] object-contain animate-loop-fade">
   </div>
 
   <!-- قائمة الهاتف -->
-  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 bg-white dark:bg-slate-800 px-6 py-4 font-bold text-[#333] dark:text-white text-sm text-center">
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 bg-white dark:bg-slate-800 px-6 py-4 font-bold text-[#333] dark:text-white text-sm text-center transition-colors duration-300">
     <a href="/" class="hover:text-[#1782a4]">الرئيسية</a>
     <a href="{{ route('products.index') }}" class="hover:text-[#1782a4]">المنتجات</a>
     <a href="/الخدمات" class="hover:text-[#1782a4]">الخدمات</a>
+    <a href="{{ route('solutions.index') }}" class="hover:text-[#1782a4]">الحلول</a>
+
     <a href="partners" class="hover:text-[#1782a4]">شركاؤنا</a>
     <a href="سابقة-الاعمال" class="hover:text-[#1782a4]">سابقة الأعمال</a>
     <a href="من-نحن" class="hover:text-[#1782a4]">من نحن</a>
@@ -100,29 +120,9 @@
       </button>
     </div>
   </div>
-
-  <!-- مربع البحث -->
-  <div id="search-box" class="hidden absolute left-4 top-full mt-2 w-[300px] md:w-[400px] bg-white dark:bg-slate-800 shadow-lg rounded-lg z-50 p-4">
-    <input id="search-input" type="text" placeholder="ابحث عن خدمة..." class="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1782a4]">
-    <div id="search-suggestions" class="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1 hidden rounded-md overflow-hidden border border-gray-200 dark:border-slate-600"></div>
-  </div>
 </header>
 
-<!-- سكريبت التحكم في ظهور مربع البحث -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('search-toggle');
-    const mobileToggle = document.getElementById('mobile-search-toggle');
-    const box = document.getElementById('search-box');
-
-    function toggleSearchBox() {
-      box.classList.toggle('hidden');
-    }
-
-    toggle.addEventListener('click', toggleSearchBox);
-    mobileToggle.addEventListener('click', toggleSearchBox);
-  });
-</script>
+<!-- سكريبت التحكم في البحث -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('search-input');
@@ -136,7 +136,7 @@
         return;
       }
 
-      fetch(`/api/search?q=${encodeURIComponent(query)}`)
+      fetch(/api/search?q=${encodeURIComponent(query)})
         .then(res => res.json())
         .then(data => {
           suggestions.innerHTML = '';
@@ -150,7 +150,7 @@
             item.innerHTML = service.title;
             item.className = 'px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-slate-700';
             item.onclick = () => {
-              window.location.href = `/الخدمات/${service.slug}`;
+              window.location.href = /الخدمات/${service.slug};
             };
             suggestions.appendChild(item);
           });
@@ -166,3 +166,5 @@
     });
   });
 </script>
+
+

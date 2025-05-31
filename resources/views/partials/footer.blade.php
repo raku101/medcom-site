@@ -74,6 +74,12 @@
               <a href="https://www.pinterest.com/medcomitcom/" class="bg-[#1a5a72] hover:bg-[#1ac8a4] w-8 h-8 rounded-full flex items-center justify-center transition">
                 <i class="fab fa-pinterest"></i>
               </a>
+              <a href="https://www.tiktok.com/@medcom.it" class="bg-[#1a5a72] hover:bg-[#1ac8a4] w-8 h-8 rounded-full flex items-center justify-center transition">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="https://www.snapchat.com/add/medcom.it" class="bg-[#1a5a72] hover:bg-[#1ac8a4] w-8 h-8 rounded-full flex items-center justify-center transition">
+                <i class="fab fa-snapchat"></i>
+              </a>
             </div>
           </div>
         </div>

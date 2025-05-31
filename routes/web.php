@@ -39,6 +39,27 @@ Route::get('/حلول-البيوت-الذكية', fn () => view('smart-homes'));
 Route::get('/حلول-الحوسبة-الافتراضية', fn () => view('virtualization'));
 Route::get('/إدارة-المشروعات-التقنية', fn () => view('project-management'));
 Route::get('/أعمال-الكهرباء', fn () => view('electrical-works'));
+Route::view('/solutions/الشبكات', 'solutions.network')->name('solutions.network');
+Route::view('/solutions/الحوسبة-الافتراضية', 'solutions.virtualization')->name('solutions.virtualization');
+Route::view('/solutions/الأنظمة-الأمنية', 'solutions.security')->name('solutions.security');
+Route::view('/solutions/إدارة-الدور', 'solutions.queue')->name('solutions.queue');
+Route::view('/solutions/المباني-الذكية', 'solutions.smartbuilding')->name('solutions.smartbuilding');
+Route::view('/solutions/الصوتيات', 'solutions.audio')->name('solutions.audio');
+Route::view('/solutions/السلامة-المهنية', 'solutions.safety')->name('solutions.safety');
+Route::view('/solutions/الربط-والتكامل', 'solutions.integration')->name('solutions.integration');
+Route::view('/solutions/الكلاود', 'solutions.cloud')->name('solutions.cloud');
+Route::view('/solutions/برامج-الحماية', 'solutions.securitysoftware')->name('solutions.securitysoftware');
+Route::view('/solutions/التتبع-والأساطيل', 'solutions.tracking')->name('solutions.tracking');
+Route::get('lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['ar', 'en'])) {
+        abort(400);
+    }
+    session(['locale' => $locale]);
+    return back();
+})->name('lang.switch');
+
+// صفحة عرض كل الحلول
+Route::view('/الحلول', 'solutions')->name('solutions.index');
 
 // ✅ تفاصيل الخدمات الديناميكية من الملفات
 Route::get('/الخدمات/{slug}', function ($slug) {
