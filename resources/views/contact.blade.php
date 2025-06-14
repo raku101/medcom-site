@@ -88,6 +88,16 @@
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
+    <!-- رقم 3 -->
+    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-500">
+      <span>+966595932021</span>
+      <a href="tel:+966557484945" class="text-[#1a5a72] hover:text-green-600" title="اتصال">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a href="https://wa.me/966557484945" target="_blank" class="text-[#1a5a72] hover:text-green-600" title="واتساب">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
 
   </div>
 </div>

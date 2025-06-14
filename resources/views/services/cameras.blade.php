@@ -24,10 +24,10 @@
 <section class="py-16 bg-white dark:bg-slate-800 text-right">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 تعد شركة ميدكوم من الرواد في مجال تأسيس كاميرات المراقبة، حيث تقدم حلولًا أمنية متكاملة تلبي احتياجات العملاء المتنوعة.
             </p>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 تقدم ميدكوم مجموعة واسعة من الخيارات تشمل الكاميرات الداخلية والخارجية، والكاميرات ذات الرؤية الليلية، بالإضافة إلى الحلول اللاسلكية والذكية.
             </p>
             <div class="bg-[#f8fafc] dark:bg-slate-700 p-6 rounded-lg border-r-4 border-[#1a9ba4] mb-8">
