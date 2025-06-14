@@ -129,10 +129,63 @@
 
 
 
+<section class="py-16 bg-gray-100 dark:bg-slate-900">
+  <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-12">
+
+    <!-- النص التعريفي -->
+    <div class="w-full md:w-1/2 text-center md:text-right">
+      <h2 class="text-4xl font-extrabold text-[#1782a4] dark:text-[#60cdf2] mb-4 animate-fade-in-down">
+        من نحن
+      </h2>
+      <p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed mb-6 animate-fade-in">
+        Medcom هي شركة رائدة في مجال الأنظمة الأمنية وحلول الشبكات، تأسست لتلبية احتياجات السوق المتزايدة في مجال تكنولوجيا المعلومات.
+        نحن نقدم مجموعة شاملة من الحلول والخدمات التي تساعد المؤسسات على تعزيز أمانها وكفاءتها التشغيلية.
+      </p>
+      <a href="/من-نحن" class="inline-block px-6 py-2 bg-[#1782a4] text-white hover:bg-[#0e5f75] rounded-md text-sm transition animate-fade-in-up">
+        تعرف أكثر
+      </a>
+    </div>
+
+    <!-- صورة تعريفية -->
+    <div class="w-full md:w-1/2 flex justify-center animate-fade-in-left">
+      <img src="{{ asset('images/about-medcom.jpg') }}" alt="Medcom" class="max-w-sm w-full rounded-xl shadow-lg">
+    </div>
+
+  </div>
+</section>
 
 
 
-<!-- Services Section -->
+
+<!-- حركات CSS -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in       { animation: fade-in 0.8s ease forwards; }
+.animate-fade-in-down  { animation: fade-in-down 0.8s ease forwards; }
+.animate-fade-in-up    { animation: fade-in-up 0.8s ease forwards; }
+.animate-fade-in-left  { animation: fade-in-left 0.8s ease forwards; }
+</style>
+
+
 <!-- خدماتنا في الرئيسية -->
 <section class="py-16 bg-gray-100 dark:bg-slate-900">
     <div class="container mx-auto px-4">
@@ -142,98 +195,96 @@
             <p class="text-lg text-gray-600 dark:text-gray-300">تعرف على أبرز خدماتنا التقنية</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach($services->take(6) as $service)
-                <a href="{{ url('/الخدمات/' . $service->slug) }}"
-                   class="block bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]"
-                   data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
-                    <img src="{{ asset('images/services/' . $service->slug . '.jpg') }}"
-                         onerror="this.src='{{ asset('images/services/default.jpg') }}'"
-                         alt="{{ $service->title }}"
-                         class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold text-[#1a5a72] text-center">{{ $service->title }}</h3>
-                    </div>
-                </a>
-            @endforeach
-        </div>
+        @if($services->count())
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach($services as $service)
+                    <a href="{{ url('/الخدمات/' . $service->slug) }}"
+                       class="block bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#1a5a72]"
+                       data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                        <img src="{{ asset('images/services/' . $service->slug . '.jpg') }}"
+                             onerror="this.src='{{ asset('images/services/default.jpg') }}'"
+                             alt="{{ $service->title }}"
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-[#1a5a72] text-center">{{ $service->title }}</h3>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
 
-        <div class="text-center mt-10">
-            <a href="{{ route('services.index') }}"
-               class="inline-block bg-[#1a5a72] text-white font-bold py-3 px-8 rounded-full hover:bg-[#155768] transition-all shadow-lg">
-                عرض المزيد من الخدمات
-            </a>
-        </div>
+            <div class="text-center mt-10">
+                <a href="{{ route('services.index') }}"
+                   class="inline-block bg-[#1a5a72] text-white font-bold py-3 px-8 rounded-full hover:bg-[#155768] transition-all shadow-lg">
+                    عرض المزيد من الخدمات
+                </a>
+            </div>
+        @else
+            <p class="text-center text-red-500 text-lg mt-8 font-semibold">لا توجد خدمات لعرضها حالياً.</p>
+        @endif
     </div>
 </section>
 
 
-<!-- ======= قسم نبذة تعريفية صغيرة ======= -->
-<section class="text-center pt-0 pb-8 px-4 bg-white dark:bg-gray-800">
-  <div class="inline-block bg-[#1782a4] text-white text-sm sm:text-base font-bold rounded-full px-6 py-2 shadow-md">
-    كل الخدمات والمنتجات التقنية في مكان واحد
-  </div>
-  <p class="mt-4 text-sm sm:text-base text-[#0e5f75] dark:text-[#9ddff2] font-medium">
-    تقدم الشركة حلولًا شاملة تواكب تطلعات الأعمال وتسهم في تحقيق أهداف الأعمال
-  </p>
-</section>
+
 <!-- ======= قسم إنجازاتنا بالأرقام ======= -->
 <section class="py-16 bg-gray-100 dark:bg-gray-900" id="stats">
   <div class="container mx-auto px-4">
     <div class="text-center mb-10">
-      <h2 class="text-4xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-4">إنجازاتنا بالأرقام</h2>
+      <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-4">إنجازاتنا بالأرقام</h2>
       <div class="w-24 h-1 bg-[#1ac8a4] mx-auto"></div>
     </div>
+
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      @foreach ([ 
+      @foreach ([
         ['count' => 300, 'label' => 'مشروع مكتمل'],
         ['count' => 1000, 'label' => 'عميل راضٍ'],
         ['count' => 50, 'label' => 'شريك استراتيجي'],
-        ['count' => 24, 'label' => 'ساعة دعم فني']
+        ['count' => 24, 'label' => 'ساعة دعم فني'],
       ] as $stat)
-      <div class="bg-white dark:bg-gray-700 p-5 rounded-xl shadow-md">
-        <div class="text-6xl font-extrabold text-[#1a5a72] dark:text-[#60cdf2] mb-2 counter" data-target="{{ $stat['count'] }}">0</div>
-        <div class="text-lg text-gray-600 dark:text-gray-300">{{ $stat['label'] }}</div>
-      </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center justify-center">
+          <div class="counter text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1a5a72] dark:text-[#60cdf2] mb-2" data-target="{{ $stat['count'] }}">0</div>
+          <div class="text-sm sm:text-base text-gray-600 dark:text-gray-300">{{ $stat['label'] }}</div>
+        </div>
       @endforeach
     </div>
   </div>
 </section>
 
-<!-- ======= سكريبت تحريك الأرقام ======= -->
+<!-- ======= سكربت تشغيل العدادات بتزامن + إعادة كل 15 ثانية ======= -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const counter = entry.target;
-          const target = +counter.getAttribute('data-target');
-          let count = 0;
-          const speed = 10;
-          const step = Math.ceil(target / 100);
+    const speed = 10;
+    const stepRatio = 100;
+    const resetInterval = 10000;
 
-          const updateCounter = () => {
-            count += step;
-            if (count < target) {
-              counter.innerText = count;
-              setTimeout(updateCounter, speed);
-            } else {
-              counter.innerText = target + '+';
-            }
-          };
+    function runCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const step = Math.ceil(target / stepRatio);
+        counter.innerText = '0';
 
-          updateCounter();
-          observer.unobserve(counter);
-        }
+        const update = () => {
+          count += step;
+          if (count < target) {
+            counter.innerText = count;
+            setTimeout(update, speed);
+          } else {
+            counter.innerText = target + '+';
+          }
+        };
+
+        update();
       });
-    }, { threshold: 0.5 });
+    }
 
-    counters.forEach(counter => {
-      observer.observe(counter);
-    });
+    runCounters();
+    setInterval(runCounters, resetInterval);
   });
 </script>
+
+
 
 <!-- قسم منتجاتنا التقنية -->
 <section class="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800">
@@ -367,23 +418,14 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- بطاقة 1 -->
       <div class="group relative h-[420px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-        <!-- طبقة التدرج اللوني -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#082f49]/90 via-[#082f49]/50 to-transparent z-10"></div>
-        
-        <!-- الصورة -->
         <img src="{{ asset('images/cloud-solution.jpg') }}" alt="الحلول السحابية" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        
-        <!-- المحتوى -->
         <div class="absolute bottom-0 left-0 right-0 z-20 p-6 text-right transition-all duration-500 group-hover:bottom-5">
-          <!-- الشريط العلوي -->
           <div class="w-16 h-1 bg-[#38bdf8] mb-4 transition-all duration-500 group-hover:w-24"></div>
-          
           <h3 class="text-2xl font-bold text-white mb-3">الحلول السحابية</h3>
-          
           <p class="text-gray-200 text-sm leading-relaxed mb-5 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
             نقدم حلول سحابية متكاملة تساعد مؤسستك على التحول الرقمي بسهولة وأمان، مع توفير مرونة عالية في إدارة الموارد وتخفيض التكاليف.
           </p>
-          
           <a href="/الحلول-السحابية" class="inline-flex items-center gap-2 text-white text-sm font-medium px-5 py-2 rounded-full bg-[#0369a1] hover:bg-[#075985] transition-all">
             عرض التفاصيل
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -450,8 +492,16 @@
         </div>
       </div>
     </div>
+
+    <!-- زر في المنتصف -->
+    <div class="w-full mt-12 flex justify-center">
+      <a href="/حلولنا" class="bg-[#0369a1] hover:bg-[#075985] text-white font-bold py-3 px-8 rounded-full transition-all">
+        استعرض جميع الحلول
+      </a>
+    </div>
   </div>
 </section>
+
 
 
 <section class="relative py-12 bg-cover bg-center" style="min-height: 170px; max-height: 170px; background-image: url('images/contact-hero.jpg');">
@@ -514,102 +564,96 @@
   </div>
 </section>
 <!--شركاؤنا-->
-<!-- قسم الشركاء بسلايدر متحرك -->
-<section class="py-12 bg-gray-50 dark:bg-slate-800">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-8">
-            <h2 class="text-2xl font-bold text-[#1a5a72] dark:text-white">شركاؤنا الاستراتيجيون</h2>
-            <div class="w-16 h-1 bg-[#55aabb] mx-auto mt-3"></div>
-        </div>
-
-        <div class="relative">
-            <!-- سلايدر الشركاء -->
-            <div class="swiper partner-swiper">
-                <div class="swiper-wrapper py-4">
-                    @php
-                    $logos = [
-                        'hikvision', 'dahua', 'partner12', 'partner11', 'cisco', 'azure',
-                        'partner3', 'partner2', 'partner4', 'partner9', 'fortinet',
-                        'partner7', '1', '2', '3', '4', '5', '6', '7', '8',
-                        '9', '11', '12', '13', '14', '15', '16', '17', '18', '19',
-                        '20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
-                        '30', '31'
-                    ];
-                    @endphp
-
-                    @foreach (array_merge($logos, $logos, $logos) as $logo)
-                    <div class="swiper-slide">
-                        <div class="partner-logo h-24 flex items-center justify-center px-4">
-                            <img src="{{ asset('images/partners/' . $logo . '.png') }}" alt="{{ $logo }}"
-                                 class="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110">
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
+<!-- قسم الشركاء مع تحسين العرض في الوضع المظلم -->
+<section class="py-12 bg-gray-50 dark:bg-slate-800 relative">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-[#1a5a72] dark:text-white">شركاؤنا الاستراتيجيون</h2>
+      <div class="w-16 h-1 bg-[#55aabb] mx-auto mt-3"></div>
     </div>
+
+    <div class="relative">
+      <!-- أزرار الأسهم -->
+      <button id="partner-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#1a5a72] hover:bg-[#13475a] text-white p-2 rounded-full shadow-md">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button id="partner-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#1a5a72] hover:bg-[#13475a] text-white p-2 rounded-full shadow-md">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- سلايدر الشركاء -->
+      <div class="swiper partner-swiper">
+        <div class="swiper-wrapper py-4">
+          @php
+            $logos = ['hikvision', 'dahua', 'partner12', 'partner11', 'cisco', 'azure', 'fortinet', '1', '2', '3', '4', '5'];
+          @endphp
+          @foreach(array_merge($logos, $logos) as $logo)
+            <div class="swiper-slide">
+              <div class="partner-logo h-24 flex items-center justify-center px-4">
+                <div class="bg-white p-2 rounded-md shadow-md dark:shadow dark:bg-white">
+                  <img src="{{ asset('images/partners/' . $logo . '.png') }}"
+                       alt="{{ $logo }}"
+                       class="h-16 w-auto object-contain transition-all duration-300 hover:scale-110" />
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- أضف هذه الأكواد في head -->
+<!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-<!-- أضف هذا الكود قبل إغلاق body -->
+<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        new Swiper('.partner-swiper', {
-            loop: true,
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            speed: 4000,
-            grabCursor: false,
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            freeMode: {
-                enabled: true,
-                momentum: false
-            },
-            breakpoints: {
-                640: { spaceBetween: 40 },
-                1024: { spaceBetween: 50 }
-            },
-            on: {
-                init: function() {
-                    // إصلاح بداية السلايدر
-                    this.slideTo(0, 0);
-                }
-            }
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.partner-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 4000,
+      grabCursor: true,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      freeMode: {
+        enabled: true,
+        momentum: false
+      },
+      navigation: {
+        nextEl: '#partner-next',
+        prevEl: '#partner-prev',
+      },
     });
+  });
 </script>
 
 <style>
-    /* تخصيص سلايدر الشركاء */
-    .partner-swiper {
-        overflow: hidden;
-    }
-    
-    .partner-swiper .swiper-slide {
-        width: auto !important;
-    }
-    
-    .partner-logo {
-        transition: all 0.3s ease;
-    }
-    
-    .partner-logo:hover {
-        transform: translateY(-5px);
-    }
-    
-    /* إخفاء أشرطة التمرير */
-    .partner-swiper::-webkit-scrollbar {
-        display: none;
-    }
+  .partner-swiper {
+    overflow: hidden;
+  }
+
+  .partner-swiper .swiper-slide {
+    width: auto !important;
+  }
+
+  .partner-logo:hover {
+    transform: translateY(-5px);
+  }
+
+  .partner-swiper::-webkit-scrollbar {
+    display: none;
+  }
 </style>
+
+
+
 
 
 <!-- قسم آراء العملاء بسلايدر متحرك -->
@@ -619,7 +663,7 @@
             <span class="text-[#55aabb] font-semibold">آراء العملاء</span>
             <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-white mt-2">ما يقولونه عنا</h2>
             <div class="w-20 h-1 bg-[#55aabb] mx-auto mt-4"></div>
-            <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p class="mt-4 text-gray-600 dark:text-gray-500 max-w-2xl mx-auto">
                 آراء عملائنا الأعزاء هي شهادتنا الحقيقية على جودة خدماتنا
             </p>
         </div>
@@ -1007,6 +1051,28 @@
                             </p>
                         </div>
                     </div>
+                    @foreach($reviews as $review)
+    <div class="swiper-slide">
+        <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+            <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-[#1a5a72] flex items-center justify-center text-white text-xl font-bold">
+                    {{ $review->initial }}
+                </div>
+                <div class="mr-3">
+                    <h4 class="font-bold text-[#1a5a72] dark:text-white">{{ $review->name }}</h4>
+                </div>
+            </div>
+            <div class="flex mb-2">
+                @for ($i = 1; $i <= 5; $i++)
+                    <span class="{{ $i <= $review->rating ? 'text-yellow-400' : 'text-gray-300' }}">★</span>
+                @endfor
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">
+                "{{ $review->comment }}"
+            </p>
+        </div>
+    </div>
+@endforeach
 
                     <!-- العميل 20 -->
                     <div class="swiper-slide">
@@ -1035,6 +1101,35 @@
             <div class="swiper-button-prev !text-[#1a5a72] dark:!text-white"></div>
         </div>
     </div>
+
+
+
+    
+<div class="mt-12 max-w-xl mx-auto bg-gray-100 dark:bg-slate-800 p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold text-[#1a5a72] dark:text-white mb-4 text-center">
+        شاركنا رأيك حول خدماتنا
+    </h3>
+
+    <div class="mt-12 max-w-xl mx-auto bg-gray-100 dark:bg-slate-800 p-6 rounded-xl shadow">
+      
+    <form method="POST" action="{{ route('reviews.store') }}">
+        @csrf
+        <div class="mb-4">
+            <label class="block text-gray-700 dark:text-white">الاسم</label>
+            <input type="text" name="name" required class="w-full mt-1 p-2 rounded border" />
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 dark:text-white">التقييم (1 - 5)</label>
+            <input type="number" name="rating" min="1" max="5" required class="w-full mt-1 p-2 rounded border" />
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 dark:text-white">رأيك</label>
+            <textarea name="comment" required class="w-full mt-1 p-2 rounded border"></textarea>
+        </div>
+        <button type="submit" class="bg-[#1a5a72] text-white px-4 py-2 rounded hover:bg-[#144c60]">إرسال</button>
+    </form>
+</div>
+
 </section>
 
 <!-- أضف هذه الأكواد في head -->

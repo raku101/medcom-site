@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-right">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">ما هو الانتقال إلى السحابة؟</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 عندما تختار شركة "الانتقال إلى السحابة"، فهذا يعني أن البنية التحتية لتكنولوجيا المعلومات لديها يتم تخزينها خارج الموقع، في مركز بيانات يتم صيانته بواسطة مزوّد خدمة الحوسبة السحابية.
             </p>
             <div class="bg-[#f8fafc] dark:bg-slate-700 p-6 rounded-lg border-r-4 border-[#1a9ba4] mb-8">
@@ -88,7 +88,7 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-2">{{ $service['title'] }}</h3>
-                    <p class="text-gray-700 dark:text-gray-300">{{ $service['desc'] }}</p>
+                    <p class="text-gray-700 dark:text-gray-500">{{ $service['desc'] }}</p>
                 </div>
             </div>
             @endforeach

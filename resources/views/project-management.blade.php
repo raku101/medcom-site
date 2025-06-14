@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">حلول متكاملة لإدارة مشاريعك التقنية</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 نقدم لك حلولًا متكاملة لإدارة مشاريعك التقنية، تضمن لك التخطيط الدقيق، التنفيذ السلس، وتحقيق الأهداف بكفاءة.
             </p>
         </div>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="md:w-3/4">
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-2">{{ $index }}</h3>
-                    <p class="text-gray-700 dark:text-gray-300">{{ $phase }}</p>
+                    <p class="text-gray-700 dark:text-gray-500">{{ $phase }}</p>
                 </div>
             </div>
             @endforeach

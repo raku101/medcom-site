@@ -181,6 +181,10 @@
     animation: loop-slide-fade 8s ease-in-out infinite;
   }
 </style>
+<!-- Bootstrap JS (for modals, dropdowns, etc.) -->
+<!-- Bootstrap 5.3 bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
   @yield('scripts')
 </body>

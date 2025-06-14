@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/cloud-solutions-bg.jpg') }}" alt="خلفية صفحة الحلول السحابية" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -25,7 +24,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">حلولنا السحابية المتكاملة</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم مجموعة متكاملة من الخدمات السحابية المصممة لاحتياجات عملك
             </p>
         </div>
@@ -34,8 +33,8 @@
             <!-- Solution 1 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🗃️</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تخزين البيانات السحابي</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">تخزين البيانات السحابي</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>حلول تخزين احترافية للملفات والمستندات</span>
@@ -54,8 +53,8 @@
             <!-- Solution 2 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🧠</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">النسخ الاحتياطي السحابي</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">النسخ الاحتياطي السحابي</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>نسخ احتياطي يومي أو آلي للأنظمة والملفات</span>
@@ -74,8 +73,8 @@
             <!-- Solution 3 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🖥️</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">استضافة السيرفرات السحابية</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">استضافة السيرفرات السحابية</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>سيرفرات افتراضية (VPS / VDS)</span>
@@ -94,8 +93,8 @@
             <!-- Solution 4 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">📩</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">البريد الإلكتروني السحابي</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">البريد الإلكتروني السحابي</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>حلول بريد احترافية (Microsoft 365 - Google Workspace)</span>
@@ -114,8 +113,8 @@
             <!-- Solution 5 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🏢</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">البنية التحتية كخدمة (IaaS)</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">البنية التحتية كخدمة (IaaS)</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>إنشاء بنية تحتية كاملة على الكلاود</span>
@@ -134,8 +133,8 @@
             <!-- Solution 6 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🧾</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">البرمجيات كخدمة (SaaS)</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">البرمجيات كخدمة (SaaS)</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>تشغيل برامج عبر الإنترنت مثل أنظمة ERP</span>
@@ -154,8 +153,8 @@
             <!-- Solution 7 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🔐</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">الأمن السيبراني السحابي</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">الأمن السيبراني السحابي</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>حماية البيانات في الكلاود ضد الاختراق</span>
@@ -174,8 +173,8 @@
             <!-- Solution 8 -->
             <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#1a5a72]">
                 <div class="text-[#1a5a72] dark:text-[#60cdf2] mb-4 text-2xl">🔄</div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">الربط الهجين (Hybrid)</h3>
-                <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">الربط الهجين (Hybrid)</h3>
+                <ul class="text-gray-600 dark:text-gray-500 space-y-2">
                     <li class="flex items-start">
                         <span class="mr-2">•</span>
                         <span>الجمع بين السيرفرات الداخلية والحلول السحابية</span>
@@ -198,8 +197,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">مزايا الحلول السحابية</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">مزايا الحلول السحابية</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 كيف يمكن للحلول السحابية تحسين كفاءة عملك وتقليل التكاليف
             </p>
         </div>
@@ -211,8 +210,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">مرونة عالية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">مرونة عالية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     سهولة التوسع أو التخفيض حسب احتياجاتك
                 </p>
             </div>
@@ -223,8 +222,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أمان متقدم</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">أمان متقدم</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حماية بياناتك بأحدث أنظمة التشفير والأمان
                 </p>
             </div>
@@ -235,8 +234,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">توفير في التكاليف</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">توفير في التكاليف</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     لا حاجة لاستثمارات كبيرة في البنية التحتية
                 </p>
             </div>
@@ -249,7 +248,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">لماذا تختار ميدكوم للحلول السحابية؟</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نتميز بتقديم حلول سحابية متكاملة بمعايير عالمية
             </p>
         </div>
@@ -262,8 +261,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">بنية تحتية قوية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">بنية تحتية قوية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         خوادم عالية الأداء في مراكز بيانات عالمية
                     </p>
                 </div>
@@ -276,8 +275,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متخصص</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">دعم فني متخصص</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         فريق دعم فني على مدار الساعة
                     </p>
                 </div>
@@ -290,8 +289,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول مخصصة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">حلول مخصصة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تصميم أنظمة تلبي احتياجات عملك الخاصة
                     </p>
                 </div>

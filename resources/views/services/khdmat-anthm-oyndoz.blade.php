@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/windows-bg.jpg') }}" alt="خلفية صفحة أنظمة ويندوز" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تركيب وتفعيل أنظمة ويندوز</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تركيب وتفعيل أنظمة ويندوز</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تنصيب وتفعيل أنظمة تشغيل Windows Server بجميع الإصدارات مع التهيئة الكاملة.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">إدارة الشبكات والصلاحيات</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">إدارة الشبكات والصلاحيات</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     إدارة الشبكات باستخدام Active Directory وGroup Policy وضبط صلاحيات المستخدمين والملفات.
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">خدمات الشبكة الداخلية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">خدمات الشبكة الداخلية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     إعداد نظام DNS وDHCP الداخلي للشركات مع ضبط إعدادات الأمان والتحكم.
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تطبيقات ويندوز المخصصة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تطبيقات ويندوز المخصصة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     برمجة تطبيقات مكتبية وتصميم أنظمة مخصصة للإدارة والمحاسبة والمخازن.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أدوات الأتمتة والدمج</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أدوات الأتمتة والدمج</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تطوير أدوات أوتومايشن ودمج الأنظمة مع أجهزة الحضور والانصراف والكاشير.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">حماية وتحديثات أمنية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">حماية وتحديثات أمنية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تحديثات أمنية دورية وحلول الحماية من الفيروسات ونسخ احتياطي تلقائي.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">مميزات أنظمتنا للويندوز</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">مميزات أنظمتنا للويندوز</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم حلولاً مميزة تجعل أنظمة ويندوز لديك أكثر كفاءة وأماناً
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">ربط قواعد البيانات</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">ربط قواعد البيانات</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         ربط قواعد البيانات المحلية (SQL / Access) مع الواجهة البرمجية بسلاسة وكفاءة.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حماية متقدمة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حماية متقدمة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         حماية البرمجيات بكلمات مرور وقيود على الاستخدام حسب الصلاحيات.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">صيانة دورية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">صيانة دورية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         إصلاح الأعطال البرمجية وتحديث التطبيقات القديمة بشكل دوري.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">ترقية الأنظمة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">ترقية الأنظمة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         ترقية البرمجيات للعمل مع أحدث إصدارات ويندوز دون فقدان البيانات.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">نسخ احتياطي</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">نسخ احتياطي</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         نسخ احتياطي واسترجاع البيانات تلقائياً مع إمكانية الجدولة.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متكامل</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم فني متكامل</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         دعم فني على مدار الساعة لحل أي مشكلات تواجهها في أنظمتك.
                     </p>
                 </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">خبرة 15+ عاماً</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">خبرة 15+ عاماً</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     فريق من الخبراء المتخصصين في أنظمة ويندوز منذ عام 2005.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول مخصصة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول مخصصة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة مصممة خصيصاً وفق احتياجات عملك وطريقة عملك.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم سريع</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم سريع</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     خدمة دعم فني سريعة وفعالة لحل أي مشكلات تواجهك.
                 </p>
             </div>

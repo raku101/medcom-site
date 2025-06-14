@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/communications-bg.jpg') }}" alt="خلفية صفحة أنظمة الاتصالات" 
-             class="w-full h-full object-cover object-center">
+       
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تأسيس السنترالات</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تأسيس السنترالات</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تصميم وتنفيذ أنظمة السنترالات التقليدية والرقمية بكفاءة عالية، مع توفير حلول مخصصة حسب حجم المؤسسة واحتياجاتها.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة السنترالات الهاتفية (IP PBX)</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة السنترالات الهاتفية (IP PBX)</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حلول اتصال متطورة تعمل عبر بروتوكول الإنترنت، تتيح ميزات متقدمة مثل تحويل المكالمات، البريد الصوتي، والمكالمات الداخلية المجانية بين الفروع.
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة مؤتمرات الفيديو</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة مؤتمرات الفيديو</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة متكاملة لمؤتمرات الفيديو عالية الجودة تدعم الاجتماعات عن بعد بجودة عالية، متوافقة مع جميع المنصات الرئيسية.
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أجهزة الاتصال الداخلي</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أجهزة الاتصال الداخلي</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة اتصال داخلي ذكية للمباني والمنشآت، تشمل أجهزة للبوابات، المصاعد، والغرف مع إمكانية الدمج مع أنظمة الأمن.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تأسيس خدمة الكول سنتر</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تأسيس خدمة الكول سنتر</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تصميم وتنفيذ مراكز اتصال متكاملة مع إمكانية توزيع المكالمات الذكي، إحصاءات الأداء، وإدارة علاقات العملاء.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">مقويات الإرسال والاستقبال</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">مقويات الإرسال والاستقبال</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حلول لتعزيز قوة إشارات الاتصالات في المناطق ذات التغطية الضعيفة، تضمن اتصالاً واضحاً دون انقطاع.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">ميزات إضافية لأنظمة الاتصالات</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">ميزات إضافية لأنظمة الاتصالات</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم ميزات متقدمة لتحسين تجربة الاتصالات لديك وزيادة كفاءة عملياتك
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول VoIP متكاملة مع أنظمة CRM</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول VoIP متكاملة مع أنظمة CRM</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تكامل سلس بين أنظمة الاتصال وأنظمة إدارة علاقات العملاء لتحسين خدمة العملاء وتتبع التفاعلات.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تسجيل وتحليل المكالمات</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تسجيل وتحليل المكالمات</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة تسجيل متقدمة مع أدوات تحليل لتحسين جودة الخدمة وتدريب الموظفين وضبط الجودة.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أنظمة الرد الآلي الذكية (IVR)</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">أنظمة الرد الآلي الذكية (IVR)</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة تفاعلية ذكية لتوجيه المكالمات تلقائياً وتقديم معلومات أساسية دون تدخل بشري.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">إدارة الفروع عن بعد</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">إدارة الفروع عن بعد</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         ربط الفروع المختلفة بنظام اتصالات موحد مع إدارة مركزية لجميع العمليات.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">التكامل مع التطبيقات</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">التكامل مع التطبيقات</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         إمكانية دمج نظام الاتصالات مع تطبيقات الأعمال الأخرى مثل أنظمة ERP وأنظمة البريد الإلكتروني.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تقارير وتحليلات متقدمة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تقارير وتحليلات متقدمة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         لوحات تحكم تفاعلية مع تقارير مفصلة عن أداء نظام الاتصالات ومؤشرات الأداء الرئيسية.
                     </p>
                 </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">سرعة التنفيذ</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">سرعة التنفيذ</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     ننفذ مشاريع الاتصالات في أسرع وقت ممكن دون المساس بجودة العمل، مع فريق فني مدرب على أعلى مستوى.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول آمنة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول آمنة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة اتصالات محمية بأحدث تقنيات الأمن السيبراني لضمان خصوصية وسرية اتصالاتك.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متكامل</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم فني متكامل</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     خدمة عملاء على مدار الساعة لدعمك في أي وقت، مع ضمان شامل يغطي جميع مكونات النظام.
                 </p>
             </div>

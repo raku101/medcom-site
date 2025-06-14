@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/software-bg.jpg') }}" alt="خلفية صفحة حلول البرمجيات والتطبيقات" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تطبيقات مخصصة (ويب/موبايل)</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تطبيقات مخصصة (ويب/موبايل)</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تصميم وتطوير تطبيقات ويب وجوال مخصصة تلبي احتياجات عملك بدقة مع واجهات سهلة الاستخدام.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة إدارة المؤسسات (ERP)</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة إدارة المؤسسات (ERP)</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حلول ERP متكاملة لإدارة كافة جوانب عملك من موارد بشرية، مالية، عمليات، ومخازن في نظام واحد.
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">إدارة المشاريع والمهام</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">إدارة المشاريع والمهام</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة متكاملة لإدارة المشاريع، توزيع المهام، متابعة التقدم، وتحليل الأداء لفريقك.
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تخطيط الموارد والمخزون</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تخطيط الموارد والمخزون</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة ذكية لإدارة المخزون، تتبع المنتجات، التنبيهات التلقائية، وتحليل حركة البضائع.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة نقاط بيع (POS)</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة نقاط بيع (POS)</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة نقاط بيع مخصصة مع إدارة المبيعات، العملاء، الفواتير، والتقارير التحليلية.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">حلول برمجية حسب الطلب</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">حلول برمجية حسب الطلب</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تطوير برمجيات مخصصة 100% حسب احتياجات عملك مع دعم كامل وضمان على المنتج.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">ميزات إضافية لحلولنا البرمجية</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">ميزات إضافية لحلولنا البرمجية</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم ميزات متقدمة تضمن كفاءة وأمان أنظمتنا البرمجية
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">واجهات سهلة الاستخدام</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">واجهات سهلة الاستخدام</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تصميم واجهات مستخدم بديهية وسهلة التعلم مع تجربة مستخدم محسنة.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تكامل مع الأنظمة الأخرى</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تكامل مع الأنظمة الأخرى</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         إمكانية التكامل مع أنظمتك الحالية وخدمات الطرف الثالث عبر واجهات برمجية آمنة.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تقارير وتحليلات متقدمة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تقارير وتحليلات متقدمة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         لوحات تحكم تفاعلية مع تقارير قابلة للتخصيص ورسوم بيانية توضيحية.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول سحابية وأرضية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول سحابية وأرضية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         خيارات نشر مرنة سواء على السحابة أو خوادم محلية حسب احتياجاتك الأمنية.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أمان متعدد الطبقات</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">أمان متعدد الطبقات</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تشفير البيانات، إدارة الصلاحيات الدقيقة، وحماية ضد الاختراقات.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم وتحديثات مستمرة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم وتحديثات مستمرة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         صيانة دورية، تحديثات أمنية، وإضافة ميزات جديدة باستمرار.
                     </p>
                 </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">خبرة واسعة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">خبرة واسعة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أكثر من 10 سنوات في تطوير الحلول البرمجية لمختلف القطاعات والصناعات.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول مخصصة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول مخصصة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     برمجيات مصممة خصيصاً لاحتياجات عملك وليس حلولاً جاهزة غير مرنة.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متكامل</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم فني متكامل</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     فريق دعم فني متخصص متاح على مدار الساعة لمساعدتك في أي استفسارات أو أعطال.
                 </p>
             </div>

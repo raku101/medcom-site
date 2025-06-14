@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/smart-home-bg.jpg') }}" alt="خلفية صفحة المنازل الذكية" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة الإضاءة الذكية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة الإضاءة الذكية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تحكم ذكي في إضاءة منزلك عن بعد، مع إمكانية ضبط السطوع، الألوان، الجداول الزمنية، واستشعار الحركة.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">التحكم في درجات الحرارة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">التحكم في درجات الحرارة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة تدفئة وتبريد ذكية تتعلم عاداتك وتضبط درجة الحرارة تلقائياً لتوفير الطاقة مع الحفاظ على راحتك.
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.728-2.728" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة الصوت الذكية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة الصوت الذكية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة صوت متكاملة توزع الموسيقى في جميع أنحاء المنزل مع تحكم فردي في كل غرفة ومزامنة مع خدمات البث.
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">التحكم عن بعد عبر الموبايل</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">التحكم عن بعد عبر الموبايل</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تطبيقات مخصصة تمكنك من إدارة جميع أجهزة منزلك الذكي من أي مكان في العالم عبر هاتفك الذكي.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">سيناريوهات آلية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">سيناريوهات آلية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أوضاع مبرمجة مسبقاً مثل "وضع النوم"، "وضع المغادرة"، "وضع الاستقبال" تضبط جميع الأجهزة تلقائياً.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تكامل مع المساعدات الصوتية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تكامل مع المساعدات الصوتية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     دعم كامل للتكامل مع Alexa وGoogle Assistant وSiri للتحكم الصوتي في جميع أجهزة منزلك الذكي.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">ميزات إضافية للمنازل الذكية</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">ميزات إضافية للمنازل الذكية</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم ميزات متقدمة تجعل منزلك أكثر ذكاءً وأماناً وراحة
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تحكم في الستائر والنوافذ</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تحكم في الستائر والنوافذ</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة آلية لفتح وإغلاق الستائر والنوافذ حسب جدول زمني أو ظروف الإضاءة والطقس.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">مراقبة الطاقة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">مراقبة الطاقة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة تتبع استهلاك الطاقة وتقديم تقارير وتوصيات لتوفير الطاقة وتقليل الفواتير.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أنظمة ري ذكية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">أنظمة ري ذكية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة ري تلقائية تتكيف مع ظروف الطقس ونوع النباتات لتحقيق كفاءة الري.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">كاميرات مراقبة ذكية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">كاميرات مراقبة ذكية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         كاميرات متصلة بنظام المنزل الذكي مع تحليل للحركة وإشعارات فورية عند اكتشاف نشاط غير عادي.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">إدارة الأجهزة الكهربائية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">إدارة الأجهزة الكهربائية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تحكم ذكي في جميع الأجهزة الكهربائية مع إمكانية جدولة التشغيل والإيقاف وتتبع الاستهلاك.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">واجهة مستخدم موحدة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">واجهة مستخدم موحدة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         لوحة تحكم مركزية تمكنك من إدارة جميع أنظمة المنزل الذكي من مكان واحد بسهولة.
                     </p>
                 </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول مخصصة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول مخصصة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     نقدم حلولاً مصممة خصيصاً لاحتياجات منزلك ونمط حياتك، وليس أنظمة جاهزة واحدة تناسب الجميع.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أنظمة آمنة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">أنظمة آمنة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حماية كاملة لبياناتك وخصوصيتك مع تشفير متقدم وضوابط أمان صارمة ضد الاختراق.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متكامل</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم فني متكامل</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     فريق دعم فني متخصص متاح على مدار الساعة لمساعدتك في أي استفسار أو مشكلة فنية.
                 </p>
             </div>

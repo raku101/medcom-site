@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/networking-bg.jpg') }}" alt="خلفية صفحة حلول الشبكات" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -25,7 +24,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">خدمات حلول الشبكات المتكاملة</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم مجموعة متكاملة من الحلول الشبكية المصممة لتحقيق أعلى مستويات الأداء والأمان والموثوقية
             </p>
         </div>
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تصميم وتنفيذ الشبكات</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">تصميم وتنفيذ الشبكات</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تصميم الشبكات السلكية (LAN) واللاسلكية (Wi-Fi) مع إعداد البنية التحتية للكابلات واختيار الأجهزة المناسبة مثل السويتشات والروترات ونقاط الوصول.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تهيئة الأجهزة الشبكية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">تهيئة الأجهزة الشبكية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     ضبط إعدادات الشبكات الداخلية، تكوين VLANs لتقسيم الشبكة، إعداد الجدران النارية (Firewall)، وإدارة جودة الخدمة (QoS).
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">الأمن الشبكي</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">الأمن الشبكي</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حماية البيانات عبر الشبكة باستخدام تشفير VPN، أنظمة كشف التسلل (IDS) ومنع التسلل (IPS)، والتحكم في الوصول إلى الشبكة (NAC).
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">المراقبة والإدارة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">المراقبة والإدارة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة مراقبة الشبكة (NMS)، تحليل حركة المرور (Traffic Analysis)، وإدارة الأعطال والأداء لضمان التشغيل الأمثل.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">الربط بين الفروع</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">الربط بين الفروع</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     ربط الفروع عن طريق VPN أو MPLS مع حلول SD-WAN المتقدمة لتقليل التكاليف وتحسين الأداء.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">الصيانة والدعم الفني</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600 ">الصيانة والدعم الفني</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     عقود صيانة دورية، استجابة سريعة للأعطال، وتحديثات مستمرة للأنظمة لضمان استمرارية العمل.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">مميزات حلول الشبكات لدينا</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">مميزات حلول الشبكات لدينا</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم ميزات استثنائية تضمن لك شبكة عالية الأداء، آمنة، وقابلة للتوسع
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تصميم مخصص</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">تصميم مخصص</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تصميم شبكات مخصص حسب احتياجات عملك مع مراعاة التوسع المستقبلي.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أمان متكامل</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">أمان متكامل</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         طبقات متعددة من الحماية ضد التهديدات الإلكترونية والاختراقات.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أداء عالي</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">أداء عالي</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         شبكات عالية السرعة مع إدارة ذكية لحركة المرور وجودة الخدمة.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">مراقبة مستمرة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">مراقبة مستمرة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة مراقبة متقدمة للكشف عن المشاكل قبل حدوثها.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متخصص</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">دعم فني متخصص</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         فريق دعم فني متاح على مدار الساعة لحل أي مشكلات طارئة.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول مرنة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">حلول مرنة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         حلول قابلة للتطوير والتعديل حسب تغير احتياجات عملك.
                     </p>
                 </div>
@@ -215,7 +214,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">لماذا تختار ميدكوم لحلول الشبكات؟</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 خبرة واسعة في تصميم وتنفيذ حلول شبكات متكاملة لمختلف القطاعات
             </p>
         </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">خبراء معتمدون</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">خبراء معتمدون</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     فريق من المهندسين المعتمدين من كبرى الشركات العالمية مثل Cisco, Juniper, Fortinet.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">أداء ممتاز</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">أداء ممتاز</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حلول شبكية توفر أعلى معدلات الأداء مع أقل وقت توقف ممكن.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حماية شاملة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-500">حماية شاملة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة أمنية متطورة تحمي شبكتك من أحدث التهديدات الإلكترونية.
                 </p>
             </div>
@@ -264,8 +263,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">دراسات حالة</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">دراسات حالة</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 بعض المشاريع الناجحة التي قمنا بتنفيذها لعملائنا في مختلف القطاعات
             </p>
         </div>

@@ -40,6 +40,7 @@
                     ['title' => 'حلول الكلاود', 'image' => 'cloud.jpg', 'url' => route('solutions.cloud')],
                     ['title' => 'برامج الحماية', 'image' => 'security-software.jpg', 'url' => route('solutions.securitysoftware')],
                     ['title' => 'التتبع وإدارة الأساطيل', 'image' => 'tracking.jpg', 'url' => route('solutions.tracking')],
+                    ['title' => 'الحلول البرمجية', 'image' => 'software.jpg', 'url' => route('solutions.software')],
                 ];
             @endphp
 

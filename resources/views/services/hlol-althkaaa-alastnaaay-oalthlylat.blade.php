@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/ai-bg.jpg') }}" alt="خلفية صفحة الذكاء الاصطناعي والتحليلات" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة التعرف على الوجوه والحشود</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة التعرف على الوجوه والحشود</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة مراقبة ذكية قادرة على التعرف على الوجوه، تحليل كثافة الحشود، وكشف السلوكيات المشبوهة بدقة عالية.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تحليلات الفيديو والسلوك</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تحليلات الفيديو والسلوك</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تحليل تدفقات الفيديو مباشرة لاكتشاف الأنماط، تتبع الحركات، وتحليل السلوكيات باستخدام خوارزميات متقدمة.
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تنبؤ بالأعطال باستخدام الذكاء الاصطناعي</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تنبؤ بالأعطال باستخدام الذكاء الاصطناعي</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة تنبؤية تحلل أنماط البيانات للتنبؤ بالأعطال المحتملة قبل حدوثها، مما يقلل من وقت التوقف والتكاليف.
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">روبوتات محادثة ذكية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">روبوتات محادثة ذكية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     روبوتات محادثة متطورة تفهم اللغة الطبيعية وتقدم إجابات دقيقة لخدمة العملاء على مدار الساعة.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تحليلات البيانات الضخمة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تحليلات البيانات الضخمة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تحليل كميات هائلة من البيانات لاكتشاف الأنماط والاتجاهات واتخاذ قرارات أعمال أكثر ذكاءً.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">التعلم الآلي المتقدم</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">التعلم الآلي المتقدم</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     نماذج تعلم آلي متطورة تتحسن باستمرار مع تدفق البيانات الجديدة لتقديم نتائج أكثر دقة مع مرور الوقت.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">ميزات إضافية لحلولنا</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">ميزات إضافية لحلولنا</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم ميزات متقدمة تجعل حلول الذكاء الاصطناعي لدينا الأكثر كفاءة في السوق
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تكامل سلس مع الأنظمة الحالية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تكامل سلس مع الأنظمة الحالية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         حلولنا قابلة للتكامل بسهولة مع أنظمتك الحالية دون الحاجة إلى تغييرات جذرية في البنية التحتية.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">لوحات تحكم تفاعلية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">لوحات تحكم تفاعلية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         لوحات تحكم سهلة الاستخدام تعرض التحليلات والرؤى بشكل مرئي مع إمكانية التنقل بين البيانات.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تخصيص حسب الاحتياجات</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تخصيص حسب الاحتياجات</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         نماذج ذكاء اصطناعي مخصصة مصممة خصيصاً لتلبية احتياجات عملك الفريدة.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">معالجة اللغة الطبيعية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">معالجة اللغة الطبيعية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة تفهم وتحلل النصوص واللغات البشرية لاستخراج المعاني والمشاعر والرؤى.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">التعلم العميق</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">التعلم العميق</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         شبكات عصبية عميقة قادرة على معالجة البيانات المعقدة والتعلم من الأنماط المخفية.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">التحديث التلقائي</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">التحديث التلقائي</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة تتحسن تلقائياً مع تدفق البيانات الجديدة دون الحاجة إلى تدخل يدوي.
                     </p>
                 </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">خبرة تقنية متقدمة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">خبرة تقنية متقدمة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     فريق من خبراء الذكاء الاصطناعي ذوي خبرة عميقة في تطوير وتنفيذ الحلول الذكية.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول آمنة وموثوقة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول آمنة وموثوقة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة مبنية بأعلى معايير الأمان وحماية الخصوصية مع ضمان استمرارية التشغيل.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متكامل</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم فني متكامل</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     فريق دعم فني متخصص متاح على مدار الساعة لضمان نجاح تطبيق حلول الذكاء الاصطناعي.
                 </p>
             </div>

@@ -68,6 +68,13 @@
                                 المنتجات
                             </a>
                         </li>
+                          <li class="nav-item">
+    <a href="{{ route('admin.articles.index') }}" class="nav-link {{ request()->routeIs('admin.articles.*') ? 'active' : '' }}">
+        <i class="bi bi-newspaper"></i>
+        المقالات
+    </a>
+</li>
+
                         <li class="nav-item">
                             <a href="{{ route('admin.pages.index') }}" class="nav-link {{ request()->routeIs('admin.pages.*') ? 'active' : '' }}">
                                 <i class="bi bi-file-earmark-text"></i>
@@ -99,9 +106,10 @@
             </div>
         </div>
     </div>
+<script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize TinyMCE for rich text editors

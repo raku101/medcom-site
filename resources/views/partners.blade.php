@@ -18,7 +18,7 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-12">
+            <p class="text-lg text-gray-700 dark:text-gray-500 leading-relaxed mb-12">
                 في Medcom، نحن نؤمن بأهمية التعاون والشراكة مع أفضل الشركات والمؤسسات لتحقيق أهدافنا المشتركة.
                 يساهم شركاؤنا في تعزيز قدراتنا وتمكيننا من تقديم حلول متكاملة تلبي احتياجات عملائنا بأعلى مستويات الجودة والاحترافية.
             </p>
@@ -43,8 +43,8 @@
                 </div>
                 <div class="w-full md:w-3/4 text-right">
                     <h3 class="text-2xl font-bold text-[#1a5a72] mb-2">{{ $partner['name'] }}</h3>
-                    <p class="font-medium text-gray-600 dark:text-gray-400 mb-3">{{ $partner['title'] }}</p>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">{{ $partner['desc'] }}</p>
+                    <p class="font-medium text-gray-600 dark:text-gray-500 mb-3">{{ $partner['title'] }}</p>
+                    <p class="text-gray-700 dark:text-gray-400 leading-relaxed">{{ $partner['desc'] }}</p>
                 </div>
             </div>
             @endforeach
@@ -57,7 +57,7 @@
     <div class="container mx-auto px-4">
         <h2 class="text-2xl font-bold text-[#1a5a72] mb-8 text-center">شركاؤنا الآخرون</h2>
         <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            @foreach (range(1, 12) as $i)
+            @foreach (range(1, 43) as $i)
             <div class="w-24 md:w-32 h-24 flex items-center justify-center">
                 <img src="{{ asset('images/partners/partner'.$i.'.png') }}" alt="شريك {{ $i }}" class="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
             </div>
@@ -72,21 +72,21 @@
         <div class="max-w-4xl mx-auto text-right">
             <h2 class="text-3xl font-bold text-[#1a5a72] mb-6">لماذا تعتبر الشراكات مهمة لنا؟</h2>
             <div class="w-24 h-1 bg-[#1ac8a4] mr-0 mb-8"></div>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-8 leading-relaxed">
                 نحن نعتبر الشراكات الاستراتيجية جزءًا أساسيًا من نجاحنا. من خلال التعاون مع شركات رائدة، نحن قادرون على:
             </p>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm border-t-4 border-[#1a9ba4]">
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-3">توسيع نطاق خدماتنا</h3>
-                    <p class="text-gray-600 dark:text-gray-300">تقديم حلول متنوعة ومتكاملة</p>
+                    <p class="text-gray-600 dark:text-gray-500">تقديم حلول متنوعة ومتكاملة</p>
                 </div>
                 <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm border-t-4 border-[#1a9ba4]">
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-3">زيادة الابتكار</h3>
-                    <p class="text-gray-600 dark:text-gray-300">دمج تقنيات جديدة ومبتكرة في مشاريعنا</p>
+                    <p class="text-gray-600 dark:text-gray-500">دمج تقنيات جديدة ومبتكرة في مشاريعنا</p>
                 </div>
                 <div class="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm border-t-4 border-[#1a9ba4]">
                     <h3 class="text-xl font-bold text-[#1a5a72] mb-3">تحسين الجودة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">ضمان تقديم أعلى مستويات الجودة في جميع خدماتنا</p>
+                    <p class="text-gray-600 dark:text-gray-500">ضمان تقديم أعلى مستويات الجودة في جميع خدماتنا</p>
                 </div>
             </div>
         </div>

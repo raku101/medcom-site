@@ -19,7 +19,7 @@
 <section class="py-16 bg-white dark:bg-gray-900">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-right">
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-8 leading-relaxed">
                 Medcom هي شركة رائدة في مجال الأنظمة الأمنية وحلول الشبكات، تأسست لتلبية احتياجات السوق المتزايدة في مجال تكنولوجيا المعلومات. نحن نقدم مجموعة شاملة من الحلول والخدمات التي تساعد المؤسسات على تعزيز أمانها وكفاءتها التشغيلية.
             </p>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
@@ -52,19 +52,20 @@
                 ['icon' => 'bolt', 'title' => 'الابتكار', 'desc' => 'حلول جديدة تلبي احتياجات العملاء المتغيرة'],
                 ['icon' => 'star', 'title' => 'الجودة', 'desc' => 'أعلى معايير الجودة في جميع خدماتنا'],
                 ['icon' => 'check-circle', 'title' => 'الاحترافية', 'desc' => 'فريق محترف يسعى لتحقيق رضا العملاء'],
-                ['icon' => 'adjustments', 'title' => 'المرونة', 'desc' => 'حلول مصممة خصيصًا لكل عميل']
+                ['icon' => 'sliders-h', 'title' => 'المرونة', 'desc' => 'حلول مصممة خصيصًا لكل عميل']
             ] as $value)
             <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-all">
                 <div class="w-16 h-16 bg-[#1a5a72]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-{{ $value['icon'] }} text-[#1a9ba4] text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-2">{{ $value['title'] }}</h3>
-                <p class="text-gray-600 dark:text-gray-300">{{ $value['desc'] }}</p>
+                <p class="text-gray-600 dark:text-gray-500">{{ $value['desc'] }}</p>
             </div>
             @endforeach
         </div>
     </div>
 </section>
+
 
 <!-- Team Section -->
 <section class="py-16 bg-white dark:bg-gray-900">
@@ -73,23 +74,26 @@
             <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-3">فريقنا</h2>
             <div class="w-24 h-1 bg-[#1ac8a4] mx-auto"></div>
         </div>
-        <div class="max-w-4xl mx-auto text-right">
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+        <div class="max-w-7xl mx-auto text-right">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-8 leading-relaxed">
                 يتكون فريقنا من مجموعة من الخبراء المتميزين في مجالات تكنولوجيا المعلومات والأمن، الذين يسعون باستمرار لتطوير مهاراتهم.
             </p>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- صف واحد + تمرير أفقي -->
+            <div class="flex flex-nowrap overflow-x-auto gap-4 pb-4">
                 @foreach ([
                     ['title' => 'خبراء الأمن', 'desc' => 'متخصصون في الأنظمة الأمنية'],
                     ['title' => 'مهندسو الشبكات', 'desc' => 'متخصصون في حلول البنية التحتية'],
                     ['title' => 'دعم فني', 'desc' => 'متاحون لمساعدتك 24/7'],
-                    ['title' => 'مهندسو الكهرباء', 'desc' => 'متخصصون في الأنظمة الكهربائية']
+                    ['title' => 'مهندسو الكهرباء', 'desc' => 'متخصصون في الأنظمة الكهربائية'],
+                    ['title' => 'مطورو التطبيقات والمواقع', 'desc' => 'بناء وتطوير أنظمة ويب وموبايل متقدمة'],
                 ] as $member)
-                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center text-gray-700 dark:text-gray-200">
-                    <div class="w-24 h-24 rounded-full bg-[#1a5a72]/10 mx-auto mb-4 flex items-center justify-center">
-                        <i class="fas fa-user text-[#1a5a72] text-3xl"></i>
+                <div class="min-w-[200px] max-w-[220px] bg-gray-50 dark:bg-gray-800 p-4 rounded-lg text-center text-gray-700 dark:text-gray-200 shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-[#1a5a72]/10 mx-auto mb-3 flex items-center justify-center">
+                        <i class="fas fa-user text-[#1a5a72] text-xl"></i>
                     </div>
-                    <h3 class="font-bold text-[#1a5a72] dark:text-[#60cdf2]">{{ $member['title'] }}</h3>
-                    <p class="text-sm">{{ $member['desc'] }}</p>
+                    <h3 class="font-bold text-[#1a5a72] dark:text-[#60cdf2] text-sm leading-snug">{{ $member['title'] }}</h3>
+                    <p class="text-xs mt-1 leading-relaxed">{{ $member['desc'] }}</p>
                 </div>
                 @endforeach
             </div>
@@ -97,36 +101,73 @@
     </div>
 </section>
 
-<!-- Stats Section -->
-<section class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-3">إنجازاتنا بالأرقام</h2>
-            <div class="w-24 h-1 bg-[#1ac8a4] mx-auto"></div>
-        </div>
-        <div class="grid md:grid-cols-4 gap-6 text-center">
-            @foreach ([ 
-                ['count' => +300, 'label' => 'مشروع مكتمل'],
-                ['count' => +1000, 'label' => 'عميل راضٍ'],
-                ['count' => +50, 'label' => 'شريك استراتيجي'],
-                ['count' => 24, 'label' => 'ساعة دعم فني']
-            ] as $stat)
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                <div class="text-4xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-2 counter" data-count="{{ $stat['count'] }}">0</div>
-                <div class="text-gray-600 dark:text-gray-300">{{ $stat['label'] }}</div>
-            </div>
-            @endforeach
-        </div>
+
+<!-- ======= قسم إنجازاتنا بالأرقام ======= -->
+<section class="py-16 bg-gray-100 dark:bg-gray-900" id="stats">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-4">إنجازاتنا بالأرقام</h2>
+      <div class="w-24 h-1 bg-[#1ac8a4] mx-auto"></div>
     </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      @foreach ([
+        ['count' => 300, 'label' => 'مشروع مكتمل'],
+        ['count' => 1000, 'label' => 'عميل راضٍ'],
+        ['count' => 50, 'label' => 'شريك استراتيجي'],
+        ['count' => 24, 'label' => 'ساعة دعم فني'],
+      ] as $stat)
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center justify-center">
+          <div class="counter text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1a5a72] dark:text-[#60cdf2] mb-2" data-target="{{ $stat['count'] }}">0</div>
+          <div class="text-sm sm:text-base text-gray-600 dark:text-gray-300">{{ $stat['label'] }}</div>
+        </div>
+      @endforeach
+    </div>
+  </div>
 </section>
+
+<!-- ======= سكربت تشغيل العدادات بتزامن + إعادة كل 15 ثانية ======= -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 10;
+    const stepRatio = 100;
+    const resetInterval = 10000;
+
+    function runCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const step = Math.ceil(target / stepRatio);
+        counter.innerText = '0';
+
+        const update = () => {
+          count += step;
+          if (count < target) {
+            counter.innerText = count;
+            setTimeout(update, speed);
+          } else {
+            counter.innerText = target + '+';
+          }
+        };
+
+        update();
+      });
+    }
+
+    runCounters();
+    setInterval(runCounters, resetInterval);
+  });
+</script>
+
 
 <!-- ملف تعريفي -->
 <section class="py-16 bg-[#1a5a72] text-white">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 md:p-10 lg:p-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">الملف التعريفي للشركة</h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">تعرّف على رؤيتنا، مهمتنا، وقيمنا. حمّل الملف التعريفي الكامل.</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">الملف التعريفي للشركة</h2>
+                <p class="text-gray-600 dark:text-gray-500 mb-6">تعرّف على رؤيتنا، مهمتنا، وقيمنا. حمّل الملف التعريفي الكامل.</p>
                 <a href="{{ asset('files/company-profile.pdf') }}" download
                    class="inline-block bg-gradient-to-r from-[#1a5a72] to-[#1a9ba4] text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all duration-300">
                     تحميل الملف

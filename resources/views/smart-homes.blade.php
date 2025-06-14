@@ -24,7 +24,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">كيف تخدمك أنظمة البيوت الذكية في منزلك؟</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 تشمل هذه الخدمة تركيب وإدارة أنظمة ذكية للمباني السكنية. تتضمن أنظمة التحكم في الطاقة، الأمان، الإضاءة، وأنظمة الاتصالات. تهدف إلى تحسين الكفاءة التشغيلية وتوفير بيئة معيشة مريحة وآمنة.
             </p>
             <div class="grid md:grid-cols-2 gap-8 mb-12">

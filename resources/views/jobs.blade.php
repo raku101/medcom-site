@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">فرص للتميز والنمو</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 إذا كنت ترغب في العمل في بيئة تعاونية حيث يتم توفير الفرص، وتطوير المهارات ومكافأة المتميزين، فقد تكون بالضبط ما نبحث عنه.
             </p>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
@@ -100,7 +100,7 @@
                             <span class="text-sm text-gray-500 dark:text-gray-400">الرقم المرجعي: #{{ 1000 + $index }}</span>
                             <span class="bg-[#1a5a72] text-white px-3 py-1 rounded-full text-sm font-medium">{{ $job['salary'] }} ر.س</span>
                         </div>
-                        <button class="mt-4 w-full bg-[#f8fafc] dark:bg-slate-700 hover:bg-[#1a5a72] hover:text-white text-[#1a5a72] font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
+                        <button class="mt-4 w-full bg-[#f8fafc] dark:bg-slate-700 hover:bg-[#1a5a72] hover:text-white text-[#1a5a72] dark:text-gray-300 font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                             التقديم الآن
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -145,10 +145,10 @@
             </div>
             <div class="md:w-1/2">
                 <h2 class="text-2xl font-bold text-[#1a5a72] mb-4">كيف تتقدم للوظيفة؟</h2>
-                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                <p class="text-gray-700 dark:text-gray-500 mb-4">
                     نرحب بطلبات التوظيف من الموهوبين الذين يبحثون عن فرصة للنمو والتطور في بيئة عمل ديناميكية.
                 </p>
-                <ol class="list-decimal pr-5 space-y-3 text-gray-700 dark:text-gray-300">
+                <ol class="list-decimal pr-5 space-y-3 text-gray-700 dark:text-gray-500">
                     <li>اختر الوظيفة المناسبة لمهاراتك وخبراتك</li>
                     <li>أعد سيرتك الذاتية بشكل واضح ومختصر</li>
                     <li>أرسل سيرتك الذاتية عبر النموذج المخصص</li>

@@ -71,6 +71,7 @@ class ServiceController extends Controller
 
     /**
      * تحديث خدمة.
+     * يتم تحديث العنوان والوصف فقط دون المساس بـ slug.
      */
     public function update(Request $request, Service $service)
     {
@@ -80,8 +81,8 @@ class ServiceController extends Controller
         ]);
 
         $service->title = $request->title;
-        $service->slug = Str::slug($request->title);
         $service->description = $request->description;
+
         $service->save();
 
         return redirect()->route('admin.services.index')->with('success', 'تم تحديث الخدمة بنجاح');

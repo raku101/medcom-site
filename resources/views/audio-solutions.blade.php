@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-right">
             <h2 class="text-2xl font-bold text-[#1a5a72] dark:text-[#60cdf2] mb-6">استخدامات الأنظمة الصوتية الذكية في الأماكن التجارية</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 نظام الصوت متعدد المناطق المقدم من شركتنا يتيح تشغيل محتوى صوتي مختلف في مناطق متعددة داخل المبنى في وقت واحد. يتميز كل منطقة بمكبرات صوت وعناصر تحكم في مستوى الصوت الخاصة بها، مما يتيح لك إنشاء بيئات صوتية مميزة تتناسب مع احتياجات وتفضيلات كل جزء من المساحة.
             </p>
             <div class="grid md:grid-cols-2 gap-8 mb-12">

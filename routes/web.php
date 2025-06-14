@@ -9,10 +9,9 @@ use App\Models\Service;
 use App\Models\Page;
 
 // ✅ الصفحة الرئيسية
-Route::get('/', function () {
-    $services = Service::latest()->take(6)->get();
-    return view('home', compact('services'));
-});
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
 
 // ✅ الخدمات العامة
 Route::get('/الخدمات', [ServiceController::class, 'publicIndex'])->name('services.index');
@@ -50,6 +49,8 @@ Route::view('/solutions/الربط-والتكامل', 'solutions.integration')->
 Route::view('/solutions/الكلاود', 'solutions.cloud')->name('solutions.cloud');
 Route::view('/solutions/برامج-الحماية', 'solutions.securitysoftware')->name('solutions.securitysoftware');
 Route::view('/solutions/التتبع-والأساطيل', 'solutions.tracking')->name('solutions.tracking');
+Route::view('/solutions/الحلول-البرمجية', 'solutions.software')->name('solutions.software');
+
 Route::get('lang/{locale}', function ($locale) {
     if (!in_array($locale, ['ar', 'en'])) {
         abort(400);
@@ -108,6 +109,27 @@ use App\Http\Controllers\Site\ProductController;
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::delete('/admin/products/{product}/delete-image', [\App\Http\Controllers\Admin\ProductController::class, 'deleteImage'])->name('admin.products.deleteImage');
 
+Route::get('/search-suggestions', [SearchController::class, 'suggest']);
+use App\Models\Article;
+
+Route::get('/articles', function () {
+    $articles = Article::latest()->paginate(6); // أو ->get() لو بدون صفحات
+    return view('articles.index', compact('articles'));
+})->name('articles.index');
+Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () {
+    Route::resource('articles', App\Http\Controllers\Admin\ArticleController::class);
+});
+Route::resource('articles', ArticleController::class);
+use App\Http\Controllers\Site\ArticleController; // أو المسار الصحيح
+
+Route::get('/articles', [ArticleController::class, 'publicIndex'])->name('articles.index');
+
+
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+use App\Http\Controllers\ReviewController;
+
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 
 // ✅ صفحة ديناميكية حسب slug (توضع في النهاية دائمًا)

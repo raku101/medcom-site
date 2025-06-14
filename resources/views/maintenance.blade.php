@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">عقود الصيانة السنوية في تقنية المعلومات والأجهزة الأمنية</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 في عالم يعتمد بشكل متزايد على تقنية المعلومات والأمن السيبراني، لا مجال للأعطال أو التوقفات غير المتوقعة!
                 تضمن عقود الصيانة السنوية الحفاظ على استقرار الأنظمة التقنية والأجهزة الأمنية، مما يوفر لك الأمان، الكفاءة، واستمرارية العمل دون انقطاع.
             </p>
@@ -137,7 +137,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-bold text-[#1a5a72] mb-2">فريق محترف</h3>
-                <p class="text-gray-600 dark:text-gray-300">خبرة واسعة في تقنية المعلومات والأمن السيبراني</p>
+                <p class="text-gray-600 dark:text-gray-500">خبرة واسعة في تقنية المعلومات والأمن السيبراني</p>
             </div>
             <div class="text-center">
                 <div class="bg-[#1a5a72]/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -146,7 +146,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-bold text-[#1a5a72] mb-2">دعم فني متواصل</h3>
-                <p class="text-gray-600 dark:text-gray-300">خدمة على مدار الساعة لحل أي مشكلة</p>
+                <p class="text-gray-600 dark:text-gray-500">خدمة على مدار الساعة لحل أي مشكلة</p>
             </div>
             <div class="text-center">
                 <div class="bg-[#1a5a72]/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -155,7 +155,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-bold text-[#1a5a72] mb-2">أحدث التقنيات</h3>
-                <p class="text-gray-600 dark:text-gray-300">أدوات وتقنيات متطورة للحفاظ على أمان أنظمتك</p>
+                <p class="text-gray-600 dark:text-gray-500">أدوات وتقنيات متطورة للحفاظ على أمان أنظمتك</p>
             </div>
         </div>
     </div>

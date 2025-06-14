@@ -20,10 +20,9 @@
     </div>
 </section>
 
-<!-- FAQ Section -->
-<section class="py-16 bg-gray-50 dark:bg-slate-900 text-right">
+<section class="py-16 bg-gray-50 dark:bg-[#0f172a] text-right">
     <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto space-y-4">
+        <div class="max-w-4xl mx-auto space-y-6">
             @php
                 $faqs = [
                     [
@@ -46,34 +45,18 @@
                         'question' => 'هل توفرون تدريبًا على استخدام الأنظمة التي تركبونها؟',
                         'answer' => 'بالطبع، نقدم جلسات تدريبية شاملة للمستخدمين تشمل: التدريب النظري على مكونات النظام، التدريب العملي على التشغيل اليومي، التعامل مع الحالات الطارئة، وكيفية استخدام لوحات التحكم. كما نقدم كتيبات إرشادية ومراجع فيديو.'
                     ],
-                    [
-                        'question' => 'ما هي سياسة الضمان الخاصة بمنتجاتكم؟',
-                        'answer' => 'تتراوح فترات الضمان بين 1-3 سنوات حسب نوع المنتج.'
-                    ],
-                    [
-                        'question' => 'كيف يمكنني الحصول على خدمات الصيانة المنتظمة؟',
-                        'answer' => 'نقدم باقات صيانة سنوية تشمل: فحص دوري شهري، تنظيف المعدات، تحديث البرمجيات، تقرير مفصل عن حالة النظام. يمكنك الاشتراك في باقات الصيانة عند تنفيذ المشروع أو لاحقًا عبر التواصل مع قسم خدمة العملاء.'
-                    ],
-                    [
-                        'question' => 'ما المدة الزمنية اللازمة لتركيب نظام أمان كامل؟',
-                        'answer' => 'تختلف المدة حسب حجم المشروع:<br>- الشقق والمنازل: 1-3 أيام<br>- الشركات الصغيرة: 3-7 أيام<br>- المشاريع الكبيرة: 2-4 أسابيع<br>نقدم تقييمًا أوليًا مجانيًا لتحديد الجدول الزمني الدقيق.'
-                    ],
-                    [
-                        'question' => 'كيف يمكنني تحديث نظام الأمان الخاص بي؟',
-                        'answer' => 'نقدم خدمات التحديثات بعدة طرق:<br>1. تحديثات عن بعد للبرمجيات<br>2. ترقيات ميدانية للأجهزة<br>3. استبدال الأنظمة القديمة بأنواع أحدث<br>يمكنك طلب زيارة تقييم مجانية لمعرفة خيارات التحديث المناسبة لنظامك الحالي.'
-                    ]
                 ];
             @endphp
 
             @foreach ($faqs as $faq)
-                <div class="faq-card bg-white dark:bg-slate-800 p-6 rounded-xl border-r-4 border-[#1a5a72] shadow hover:shadow-lg transition-all cursor-pointer group">
+                <div class="faq-card group transition-all duration-300 cursor-pointer rounded-xl border-r-4 border-[#1a5a72] shadow hover:shadow-lg bg-white dark:bg-white text-gray-800 dark:text-white p-6">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-[#1a5a72] dark:text-white text-lg">{{ $faq['question'] }}</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:rotate-180 text-[#1a5a72] dark:text-[#60cdf2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <h3 class="font-bold text-[#1a5a72] dark:text-[#60cdf2] text-lg">{{ $faq['question'] }}</h3>
+                        <svg class="w-5 h-5 text-[#1a5a72] dark:text-[#60cdf2] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
-                    <div class="answer text-gray-600 dark:text-gray-300 mt-4 hidden group-hover:block">
+                    <div class="faq-answer mt-4 hidden group-hover:block p-4 rounded-md bg-gray-100 dark:bg-[#2f2f2f] text-gray-700 dark:text-gray-100 leading-relaxed">
                         {!! $faq['answer'] !!}
                     </div>
                 </div>
@@ -82,11 +65,13 @@
     </div>
 </section>
 
+
+
 <!-- CTA -->
-<section class="py-16 bg-white dark:bg-slate-800 text-center">
+<section class="py-16 bg-white text-center">
     <div class="container mx-auto px-4">
         <h2 class="text-2xl font-bold text-[#1a5a72] mb-4">هل ما زلت تملك سؤالاً؟</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-6 max-w-xl mx-auto">
+        <p class="text-gray-800 mb-6 max-w-xl mx-auto">
             لا تتردد في التواصل معنا عبر الهاتف أو البريد الإلكتروني، فريقنا جاهز دائمًا لمساعدتك.
         </p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
@@ -95,4 +80,5 @@
         </div>
     </div>
 </section>
+
 @endsection

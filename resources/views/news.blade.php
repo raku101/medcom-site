@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">آخر المستجدات في عالم التقنية والأمن</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 نشارككم رؤيتنا وخبراتنا عبر مقالات متخصصة وأخبار حديثة عن عالم الأنظمة الأمنية وتكنولوجيا المعلومات.
             </p>
         </div>
@@ -137,26 +137,7 @@
         </div>
 </section>
 
-<!-- Newsletter -->
-<section class="py-16 bg-white dark:bg-slate-800 text-right">
-    <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto bg-gradient-to-r from-[#1a5a72] to-[#1a9ba4] rounded-xl p-8 md:p-10 shadow-lg">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="text-white">
-                    <h2 class="text-2xl font-bold mb-2">اشترك في نشرتنا البريدية</h2>
-                    <p class="opacity-90">احصل على أحدث الأخبار والتحديثات مباشرة إلى بريدك الإلكتروني</p>
-                </div>
-                <form class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                    <input type="email" placeholder="بريدك الإلكتروني" 
-                           class="px-4 py-3 rounded-lg flex-grow focus:outline-none focus:ring-2 focus:ring-[#1ac8a4]">
-                    <button type="submit" class="bg-white text-[#1a5a72] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors shadow-md">
-                        اشتراك
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
 @endsection
 
 @section('scripts')

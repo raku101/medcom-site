@@ -68,7 +68,7 @@
     <h3 class="font-bold text-[#1a5a72] mb-2">الهاتف</h3>
 
     <!-- رقم 1 -->
-    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300 mb-1">
+    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-500 mb-1">
       <span>+966558008895</span>
       <a href="tel:+966558008895" class="text-[#1a5a72] hover:text-green-600" title="اتصال">
         <i class="fas fa-phone-alt"></i>
@@ -79,7 +79,7 @@
     </div>
 
     <!-- رقم 2 -->
-    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+    <div class="flex items-center gap-2 text-gray-700 dark:text-gray-500">
       <span>+966595932021</span>
       <a href="tel:+966595932021" class="text-[#1a5a72] hover:text-green-600" title="اتصال">
         <i class="fas fa-phone-alt"></i>
@@ -101,10 +101,10 @@
             <div>
                 <h3 class="font-bold text-[#1a5a72]">البريد الإلكتروني</h3>
                 <p>
-                    <a href="mailto:info@medcom.it.com" class="text-gray-700 dark:text-gray-300 hover:underline">info@medcom.it.com</a>
+                    <a href="mailto:info@medcom.it.com" class="text-gray-700 dark:text-gray-500 hover:underline">info@medcom.it.com</a>
                 </p>
                 <p>
-                    <a href="mailto:support@medcom.it.com" class="text-gray-700 dark:text-gray-300 hover:underline">support@medcom.it.com</a>
+                    <a href="mailto:support@medcom.it.com" class="text-gray-700 dark:text-gray-500 hover:underline">support@medcom.it.com</a>
                 </p>
             </div>
         </div>
@@ -116,7 +116,7 @@
             </div>
             <div>
                 <h3 class="font-bold text-[#1a5a72]">العنوان</h3>
-                <a href="https://maps.app.goo.gl/1s6BCRDDtAN6Tkqa8?g_st=iw" target="_blank" class="text-gray-700 dark:text-gray-300 hover:underline block">
+                <a href="https://maps.app.goo.gl/1s6BCRDDtAN6Tkqa8?g_st=iw" target="_blank" class="text-gray-700 dark:text-gray-500 hover:underline block">
                     المدينة المنورة، المملكة العربية السعودية ، شارع الملك عبدالله
                 </a>
                 
@@ -126,8 +126,8 @@
         <!-- ساعات العمل -->
         <div class="pt-4">
             <h3 class="font-bold text-[#1a5a72] mb-3">ساعات العمل</h3>
-            <p class="text-gray-700 dark:text-gray-300">السبت - الخميس: 8 صباحاً - 8 مساءً</p>
-            <p class="text-gray-700 dark:text-gray-300">الجمعة: 4 - 10 مساءً</p>
+            <p class="text-gray-700 dark:text-gray-500">السبت - الخميس: 8 صباحاً - 8 مساءً</p>
+            <p class="text-gray-700 dark:text-gray-500">الجمعة: 4 - 10 مساءً</p>
         </div>
     </div>
 </div>

@@ -26,10 +26,10 @@
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold text-[#1a5a72] mb-6">خبرتنا في الأعمال الكهربائية</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 mb-6 leading-relaxed">
                 بامكانياتنا وخبرتنا الواسعة، نعمل متخصصين في مجال التوصيلات الكهربائية. نحرص دائمًا على تقديم أفضل خدمات التوصيلات الكهربائية بأسعار تنافسية ومواصفات عالية الجودة.
             </p>
-            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p class="text-lg text-gray-700 dark:text-gray-500 leading-relaxed">
                 تعد أعمال الكهرباء أحد الجوانب الأساسية في عملية البناء والتشييد. تشمل هذه الأعمال تركيب وتوصيل الأسلاك الكهربائية والأجهزة والمعدات الكهربائية داخل المباني.
             </p>
         </div>
@@ -83,14 +83,14 @@
             </div>
             <div class="md:w-1/2">
                 <h2 class="text-2xl font-bold text-[#1a5a72] mb-4">أهمية الأعمال الكهربائية</h2>
-                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                <p class="text-gray-700 dark:text-gray-500 mb-4">
                     تلعب أعمال الكهرباء دورًا حاسمًا في توفير الطاقة الكهربائية للإضاءة والتدفئة وتشغيل الأجهزة المختلفة بالمباني.
                 </p>
-                <p class="text-gray-700 dark:text-gray-300">
+                <p class="text-gray-700 dark:text-gray-500">
                     تعد التوصيلات الكهربائية جزءاً أساسياً وحيوياً في أنظمة الكهرباء المنزلية والصناعية، حيث تضمن نقل التيار الكهربائي بأمان وفعالية.
                 </p>
                 <div class="mt-6 bg-[#f0f9ff] dark:bg-slate-700 p-4 rounded-lg border-r-4 border-[#1a5a72]">
-                    <p class="text-[#1a5a72] font-medium">
+                    <p class="text-[#1a5a72] dark:text-gray-200 font-medium">
                         يجب اختيار أفضل التوصيلات الكهربائية لضمان الأداء المثالي والحفاظ على سلامة الدارة الكهربائية.
                     </p>
                 </div>

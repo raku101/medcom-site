@@ -18,7 +18,7 @@
 <section class="py-16 bg-white dark:bg-slate-800 text-right">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-             <p class="text-lg max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+             <p class="text-lg max-w-2xl mx-auto text-gray-700 dark:text-gray-500">
                 تفتخر بتقديم مجموعة من المشاريع الناجحة التي تعكس خبرتنا واحترافيتنا
             </p>
             <h2 class="text-3xl font-bold text-[#1a5a72] mb-3">مشاريعنا البارزة</h2>
@@ -34,7 +34,7 @@
                 <h3 class="text-2xl font-bold text-[#1a5a72] mb-3">نظام أمان متكامل لمجمع سكني</h3>
                 <div class="bg-[#1a5a72]/10 p-4 rounded-lg mb-4">
                     <p class="font-medium text-[#1a5a72] mb-2">الوصف:</p>
-                    <p class="text-gray-700 dark:text-gray-300">تصميم وتنفيذ نظام أمان شامل يتضمن كاميرات مراقبة متطورة وأنظمة تحكم في الدخول وخدمات صيانة دورية</p>
+                    <p class="text-gray-700 dark:text-gray-500">تصميم وتنفيذ نظام أمان شامل يتضمن كاميرات مراقبة متطورة وأنظمة تحكم في الدخول وخدمات صيانة دورية</p>
                 </div>
                 <div class="bg-green-100 p-4 rounded-lg">
                     <p class="font-medium text-green-800 mb-2">النتيجة:</p>
@@ -52,7 +52,7 @@
                 <h3 class="text-2xl font-bold text-[#1a5a72] mb-3">إدارة شبكة لمؤسسة تعليمية</h3>
                 <div class="bg-[#1a5a72]/10 p-4 rounded-lg mb-4">
                     <p class="font-medium text-[#1a5a72] mb-2">الوصف:</p>
-                    <p class="text-gray-700 dark:text-gray-300">تصميم وتنفيذ شبكة محلية متكاملة لمؤسسة تعليمية تضم أكثر من 500 مستخدم</p>
+                    <p class="text-gray-700 dark:text-gray-500">تصميم وتنفيذ شبكة محلية متكاملة لمؤسسة تعليمية تضم أكثر من 500 مستخدم</p>
                 </div>
                 <div class="bg-green-100 p-4 rounded-lg">
                     <p class="font-medium text-green-800 mb-2">النتيجة:</p>
@@ -95,17 +95,17 @@
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
                     <div class="text-[#1a9ba4] text-4xl mb-4">✓</div>
                     <h3 class="font-bold text-[#1a5a72] mb-2">حلول مخصصة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">تصميم حسب الاحتياجات الدقيقة</p>
+                   <p class="text-gray-600 dark:text-gray-500">تصميم حسب الاحتياجات الدقيقة</p>
                 </div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
                     <div class="text-[#1a9ba4] text-4xl mb-4">✧</div>
                     <h3 class="font-bold text-[#1a5a72] mb-2">تقنيات حديثة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">أحدث الأنظمة والتقنيات</p>
+                   <p class="text-gray-600 dark:text-gray-500">أحدث الأنظمة والتقنيات</p>
                 </div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
                     <div class="text-[#1a9ba4] text-4xl mb-4">♻</div>
                     <h3 class="font-bold text-[#1a5a72] mb-2">دعم مستمر</h3>
-                    <p class="text-gray-600 dark:text-gray-300">صيانة وتحديثات دورية</p>
+                   <p class="text-gray-600 dark:text-gray-500">صيانة وتحديثات دورية</p>
                 </div>
             </div>
         </div>

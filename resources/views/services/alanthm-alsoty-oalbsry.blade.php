@@ -6,8 +6,7 @@
 <!-- Hero Section -->
 <section class="relative py-20 text-white overflow-hidden dark:bg-[#0f172a]">
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/av-bg.jpg') }}" alt="خلفية صفحة الأنظمة الصوتية والبصرية" 
-             class="w-full h-full object-cover object-center">
+        
         <div class="absolute inset-0 bg-gradient-to-br from-[#1a81a4]/90 via-[#1a6d8a]/90 to-[#1a5a72]/90"></div>
     </div>
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -38,8 +37,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.728-2.728" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">مكبرات الصوت</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">مكبرات الصوت</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     مجموعة واسعة من مكبرات الصوت عالية الجودة للمنشآت المختلفة، بدءاً من الموديلات الأساسية وحتى الأنظمة الاحترافية.
                 </p>
             </div>
@@ -51,8 +50,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة مكبرات الصوت المتكاملة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة مكبرات الصوت المتكاملة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة صوتية متكاملة تشمل مكبرات الصوت، المضخمات، معالجات الصوت، وأنظمة التحكم الذكية.
                 </p>
             </div>
@@ -64,8 +63,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">تصميم غرف اجتماعات صوتية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">تصميم غرف اجتماعات صوتية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حلول متكاملة لغرف الاجتماعات تشمل العزل الصوتي، أنظمة المؤتمرات، الميكروفونات، وتوزيع الصوت الأمثل.
                 </p>
             </div>
@@ -77,8 +76,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة عرض ذكية وشاشات تفاعلية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة عرض ذكية وشاشات تفاعلية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     شاشات عرض ذكية وتفاعلية بدقة عالية، مثالية للعروض التقديمية، الفصول الدراسية، وقاعات المؤتمرات.
                 </p>
             </div>
@@ -90,8 +89,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 12h.01m7.071-7.071a10 10 0 010 14.142m-14.142 0a10 10 0 010-14.142" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة صوتية للمساجد</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة صوتية للمساجد</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     أنظمة صوتية متخصصة للمساجد تشمل مكبرات الصوت الخارجية والداخلية، أنظمة المؤذن، وإدارة الصوت المركزية.
                 </p>
             </div>
@@ -103,8 +102,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-white">أنظمة للمدارس والمؤتمرات</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-xl mb-3 text-gray-800 dark:text-gray-600">أنظمة للمدارس والمؤتمرات</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     حلول صوتية وبصرية متكاملة للفصول الدراسية، المسارح، وقاعات المؤتمرات تشمل أنظمة الصوت، العرض، والتسجيل.
                 </p>
             </div>
@@ -116,8 +115,8 @@
 <section class="py-16 bg-white dark:bg-slate-800">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-white mb-4">ميزات إضافية لأنظمتنا الصوتية والبصرية</h2>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a5a72] dark:text-[#1a5a72] mb-4">ميزات إضافية لأنظمتنا الصوتية والبصرية</h2>
+            <p class="text-gray-600 dark:text-gray-500 max-w-3xl mx-auto">
                 نقدم ميزات متقدمة تضمن تجربة صوتية وبصرية استثنائية
             </p>
         </div>
@@ -130,8 +129,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تحكم مركزي ذكي</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تحكم مركزي ذكي</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         لوحات تحكم ذكية تمكنك من إدارة جميع الأنظمة الصوتية والبصرية من واجهة واحدة سهلة الاستخدام.
                     </p>
                 </div>
@@ -144,8 +143,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تكامل مع الأنظمة الذكية</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تكامل مع الأنظمة الذكية</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         إمكانية دمج الأنظمة الصوتية والبصرية مع أنظمة المنزل الذكي والتحكم بها عبر الأجهزة المحمولة.
                     </p>
                 </div>
@@ -158,8 +157,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول مخصصة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول مخصصة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         تصميم أنظمة صوتية وبصرية مخصصة بناءً على الخصائص الصوتية للمكان واحتياجات العملاء.
                     </p>
                 </div>
@@ -172,8 +171,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">تقنيات عالية الجودة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">تقنيات عالية الجودة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         استخدام أحدث التقنيات وأجهزة الصوت والبصريات من أفضل العلامات التجارية العالمية.
                     </p>
                 </div>
@@ -186,8 +185,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">دعم فني متكامل</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">دعم فني متكامل</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         فريق دعم فني متخصص لتقديم المساعدة الفنية والصيانة الدورية للأنظمة.
                     </p>
                 </div>
@@ -200,8 +199,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول متوافقة</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول متوافقة</h3>
+                    <p class="text-gray-600 dark:text-gray-500">
                         أنظمة متوافقة مع جميع معايير الجودة والسلامة المحلية والدولية.
                     </p>
                 </div>
@@ -227,8 +226,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">خبرة واسعة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">خبرة واسعة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     سنوات من الخبرة في تصميم وتنفيذ الأنظمة الصوتية والبصرية للمشاريع الكبيرة والصغيرة.
                 </p>
             </div>
@@ -239,8 +238,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">جودة عالية</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">جودة عالية</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     استخدام معدات صوتية وبصرية من أفضل العلامات التجارية العالمية ذات الجودة العالية.
                 </p>
             </div>
@@ -251,8 +250,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">حلول متكاملة</h3>
-                <p class="text-gray-600 dark:text-gray-300">
+                <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-gray-600">حلول متكاملة</h3>
+                <p class="text-gray-600 dark:text-gray-500">
                     تقديم حلول متكاملة تشمل التصميم، التوريد، التركيب، والصيانة.
                 </p>
             </div>

@@ -97,7 +97,7 @@
                     <i class="fas fa-star text-[#1a5a72] text-xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-[#1a5a72] mb-3">جودة عالية</h3>
-                <p class="text-gray-600 dark:text-gray-300">منتجات وخدمات بمعايير جودة عالمية</p>
+                <p class="text-gray-600 dark:text-gray-500">منتجات وخدمات بمعايير جودة عالمية</p>
             </div>
             
             <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl text-center">
@@ -105,7 +105,7 @@
                     <i class="fas fa-headset text-[#1a5a72] text-xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-[#1a5a72] mb-3">دعم فني</h3>
-                <p class="text-gray-600 dark:text-gray-300">فريق دعم فني متاح على مدار الساعة</p>
+                <p class="text-gray-600 dark:text-gray-500">فريق دعم فني متاح على مدار الساعة</p>
             </div>
             
             <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl text-center">
@@ -113,7 +113,7 @@
                     <i class="fas fa-shield-alt text-[#1a5a72] text-xl"></i>
                 </div>
                 <h3 class="text-xl font-bold text-[#1a5a72] mb-3">حماية وأمان</h3>
-                <p class="text-gray-600 dark:text-gray-300">حلول أمنية متكاملة لحماية بياناتك</p>
+                <p class="text-gray-600 dark:text-gray-500">حلول أمنية متكاملة لحماية بياناتك</p>
             </div>
         </div>
     </div>
